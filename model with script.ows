@@ -1,0 +1,367 @@
+<?xml version='1.0' encoding='utf-8'?>
+<scheme version="2.0" title="" description="">
+	<nodes>
+		<node id="0" name="File" qualified_name="Orange.widgets.data.owfile.OWFile" project_name="Orange3" version="" title="File (2)" position="(196.0, 587.0)" />
+		<node id="1" name="Neural Network" qualified_name="Orange.widgets.model.owneuralnetwork.OWNNLearner" project_name="Orange3" version="" title="Neural Network (1)" position="(723.0, 566.0)" />
+		<node id="2" name="Predictions" qualified_name="Orange.widgets.evaluate.owpredictions.OWPredictions" project_name="Orange3" version="" title="Predictions (1)" position="(1151.0, 161.0)" />
+		<node id="3" name="Data Sampler" qualified_name="Orange.widgets.data.owdatasampler.OWDataSampler" project_name="Orange3" version="" title="Data Sampler (1)" position="(358.0, 587.0)" />
+		<node id="4" name="Test and Score" qualified_name="Orange.widgets.evaluate.owtestandscore.OWTestAndScore" project_name="Orange3" version="" title="Test and Score (1)" position="(938.0, 789.0)" />
+		<node id="5" name="Data Table" qualified_name="Orange.widgets.data.owtable.OWDataTable" project_name="Orange3" version="" title="Data Table (1)" position="(412.0, 426.0)" />
+		<node id="6" name="Data Table" qualified_name="Orange.widgets.data.owtable.OWDataTable" project_name="Orange3" version="" title="Data Table" position="(329.0, 109.0)" />
+		<node id="7" name="Python Script" qualified_name="Orange.widgets.data.owpythonscript.OWPythonScript" project_name="Orange3" version="" title="Python Script (1)" position="(190.0, 216.0)" />
+		<node id="8" name="Confusion Matrix" qualified_name="Orange.widgets.evaluate.owconfusionmatrix.OWConfusionMatrix" project_name="Orange3" version="" title="Confusion Matrix" position="(1171.0, 897.0)" />
+		<node id="9" name="Calibration Plot" qualified_name="Orange.widgets.evaluate.owcalibrationplot.OWCalibrationPlot" project_name="Orange3" version="" title="Calibration Plot" position="(1273.0, 727.0)" />
+		<node id="10" name="Heat Map" qualified_name="Orange.widgets.visualize.owheatmap.OWHeatMap" project_name="Orange3" version="" title="Heat Map" position="(1335.0, 393.0)" />
+		<node id="11" name="ROC Analysis" qualified_name="Orange.widgets.evaluate.owrocanalysis.OWROCAnalysis" project_name="Orange3" version="" title="ROC Analysis" position="(1260.0, 544.0)" />
+		<node id="12" name="Sieve Diagram" qualified_name="Orange.widgets.visualize.owsieve.OWSieveDiagram" project_name="Orange3" version="" title="Sieve Diagram" position="(1370.0, 838.0)" />
+		<node id="13" name="Silhouette Plot" qualified_name="Orange.widgets.visualize.owsilhouetteplot.OWSilhouettePlot" project_name="Orange3" version="" title="Silhouette Plot" position="(1397.0, 582.0)" />
+		<node id="14" name="Bar Plot" qualified_name="Orange.widgets.visualize.owbarplot.OWBarPlot" project_name="Orange3" version="" title="Bar Plot (1)" position="(1050.0, 508.0)" />
+		<node id="15" name="Select Columns" qualified_name="Orange.widgets.data.owselectcolumns.OWSelectAttributes" project_name="Orange3" version="" title="Select Columns" position="(693.0, 476.0)" />
+		<node id="16" name="File" qualified_name="Orange.widgets.data.owfile.OWFile" project_name="Orange3" version="" title="File" position="(118.0, 744.0)" />
+		<node id="17" name="Data Sampler" qualified_name="Orange.widgets.data.owdatasampler.OWDataSampler" project_name="Orange3" version="" title="Data Sampler" position="(269.0, 737.0)" />
+		<node id="18" name="Test and Score" qualified_name="Orange.widgets.evaluate.owtestandscore.OWTestAndScore" project_name="Orange3" version="" title="Test and Score" position="(584.0, 783.0)" />
+		<node id="19" name="Neural Network" qualified_name="Orange.widgets.model.owneuralnetwork.OWNNLearner" project_name="Orange3" version="" title="Neural Network" position="(417.0, 664.0)" />
+		<node id="20" name="ROC Analysis" qualified_name="Orange.widgets.evaluate.owrocanalysis.OWROCAnalysis" project_name="Orange3" version="" title="ROC Analysis (1)" position="(1324.0, 182.0)" />
+		<node id="21" name="Explain Prediction" qualified_name="orangecontrib.prototypes.widgets.owexplainpred.OWExplainPrediction" project_name="Orange3-Prototypes" version="" title="Explain Prediction" position="(1376.0, 97.0)" />
+	</nodes>
+	<links>
+		<link id="0" source_node_id="1" sink_node_id="2" source_channel="Model" sink_channel="Predictors" enabled="true" />
+		<link id="1" source_node_id="3" sink_node_id="1" source_channel="Data Sample" sink_channel="Data" enabled="true" />
+		<link id="2" source_node_id="0" sink_node_id="3" source_channel="Data" sink_channel="Data" enabled="true" />
+		<link id="3" source_node_id="1" sink_node_id="4" source_channel="Learner" sink_channel="Learner" enabled="true" />
+		<link id="4" source_node_id="0" sink_node_id="5" source_channel="Data" sink_channel="Data" enabled="true" />
+		<link id="5" source_node_id="7" sink_node_id="2" source_channel="Data" sink_channel="Data" enabled="true" />
+		<link id="6" source_node_id="7" sink_node_id="6" source_channel="Data" sink_channel="Data" enabled="true" />
+		<link id="7" source_node_id="4" sink_node_id="8" source_channel="Evaluation Results" sink_channel="Evaluation Results" enabled="true" />
+		<link id="8" source_node_id="4" sink_node_id="9" source_channel="Evaluation Results" sink_channel="Evaluation Results" enabled="true" />
+		<link id="9" source_node_id="4" sink_node_id="10" source_channel="Predictions" sink_channel="Data" enabled="true" />
+		<link id="10" source_node_id="4" sink_node_id="11" source_channel="Evaluation Results" sink_channel="Evaluation Results" enabled="true" />
+		<link id="11" source_node_id="4" sink_node_id="12" source_channel="Predictions" sink_channel="Data" enabled="true" />
+		<link id="12" source_node_id="4" sink_node_id="13" source_channel="Predictions" sink_channel="Data" enabled="true" />
+		<link id="13" source_node_id="4" sink_node_id="14" source_channel="Predictions" sink_channel="Data" enabled="true" />
+		<link id="14" source_node_id="3" sink_node_id="15" source_channel="Data Sample" sink_channel="Data" enabled="true" />
+		<link id="15" source_node_id="15" sink_node_id="4" source_channel="Data" sink_channel="Data" enabled="true" />
+		<link id="16" source_node_id="16" sink_node_id="17" source_channel="Data" sink_channel="Data" enabled="true" />
+		<link id="17" source_node_id="17" sink_node_id="18" source_channel="Data Sample" sink_channel="Data" enabled="true" />
+		<link id="18" source_node_id="19" sink_node_id="18" source_channel="Learner" sink_channel="Learner" enabled="true" />
+		<link id="19" source_node_id="17" sink_node_id="18" source_channel="Remaining Data" sink_channel="Test Data" enabled="true" />
+		<link id="20" source_node_id="2" sink_node_id="20" source_channel="Evaluation Results" sink_channel="Evaluation Results" enabled="true" />
+		<link id="21" source_node_id="2" sink_node_id="21" source_channel="Predictions" sink_channel="Data" enabled="true" />
+	</links>
+	<annotations />
+	<thumbnail />
+	<node_properties>
+		<properties node_id="0" format="pickle">gASV5wsAAAAAAAB9lCiMEmNvbnRyb2xBcmVhVmlzaWJsZZSIjAxyZWNlbnRfcGF0aHOUXZQojB5v
+cmFuZ2V3aWRnZXQudXRpbHMuZmlsZWRpYWxvZ3OUjApSZWNlbnRQYXRolJOUKYGUfZQojAdhYnNw
+YXRolIwmRTovTmV3IGZvbGRlciAoMikvY29tYmluZWRfY3N2KDIpLnhsc3iUjAZwcmVmaXiUTowH
+cmVscGF0aJROjAV0aXRsZZSMAJSMBXNoZWV0lGgOjAtmaWxlX2Zvcm1hdJROdWJoBimBlH2UKGgJ
+jBdFOi9jb21iaW5lZF9jc3YoMikueGxzeJRoC05oDE5oDWgOaA9oDmgQTnViaAYpgZR9lChoCYw2
+QzovVXNlcnMvVGF1c2lmIFVyIFJlaG1hbi9EZXNrdG9wL2NvbWJpbmVkX2NzdigyKS54bHN4lGgL
+TmgMTmgNaA5oD2gOaBBOdWJoBimBlH2UKGgJjCJDOi9Vc2Vycy9MZW5vdm8gQm9vay9EZXNrdG9w
+LzEuY3N2lGgLTmgMTmgNaA5oD2gOaBBOdWJoBimBlH2UKGgJjBFHOi9kYXRhc2V0KDMpLmNzdpRo
+C05oDE5oDWgOaA9oDmgQTnViaAYpgZR9lChoCYxiQzovVXNlcnMvVGF1c2lmIFVyIFJlaG1hbi9B
+cHBEYXRhL0xvY2FsL1Byb2dyYW1zL09yYW5nZS9MaWIvc2l0ZS1wYWNrYWdlcy9PcmFuZ2UvZGF0
+YXNldHMvaXJpcy50YWKUaAuMD3NhbXBsZS1kYXRhc2V0c5RoDIwIaXJpcy50YWKUaA1oDmgPaA5o
+EE51YmgGKYGUfZQoaAmMZUM6L1VzZXJzL1RhdXNpZiBVciBSZWhtYW4vQXBwRGF0YS9Mb2NhbC9Q
+cm9ncmFtcy9PcmFuZ2UvTGliL3NpdGUtcGFja2FnZXMvT3JhbmdlL2RhdGFzZXRzL3RpdGFuaWMu
+dGFilGgLaCBoDIwLdGl0YW5pYy50YWKUaA1oDmgPaA5oEE51YmgGKYGUfZQoaAmMZUM6L1VzZXJz
+L1RhdXNpZiBVciBSZWhtYW4vQXBwRGF0YS9Mb2NhbC9Qcm9ncmFtcy9PcmFuZ2UvTGliL3NpdGUt
+cGFja2FnZXMvT3JhbmdlL2RhdGFzZXRzL2hvdXNpbmcudGFilGgLaCBoDIwLaG91c2luZy50YWKU
+aA1oDmgPaA5oEE51YmgGKYGUfZQoaAmMa0M6L1VzZXJzL1RhdXNpZiBVciBSZWhtYW4vQXBwRGF0
+YS9Mb2NhbC9Qcm9ncmFtcy9PcmFuZ2UvTGliL3NpdGUtcGFja2FnZXMvT3JhbmdlL2RhdGFzZXRz
+L2hlYXJ0X2Rpc2Vhc2UudGFilGgLaCBoDIwRaGVhcnRfZGlzZWFzZS50YWKUaA1oDmgPaA5oEE51
+YmgGKYGUfZQoaAmMbEM6L1VzZXJzL1RhdXNpZiBVciBSZWhtYW4vQXBwRGF0YS9Mb2NhbC9Qcm9n
+cmFtcy9PcmFuZ2UvTGliL3NpdGUtcGFja2FnZXMvT3JhbmdlL2RhdGFzZXRzL2Jyb3duLXNlbGVj
+dGVkLnRhYpRoC2ggaAyMEmJyb3duLXNlbGVjdGVkLnRhYpRoDWgOaA9oDmgQTnViaAYpgZR9lCho
+CYxhQzovVXNlcnMvVGF1c2lmIFVyIFJlaG1hbi9BcHBEYXRhL0xvY2FsL1Byb2dyYW1zL09yYW5n
+ZS9MaWIvc2l0ZS1wYWNrYWdlcy9PcmFuZ2UvZGF0YXNldHMvem9vLnRhYpRoC2ggaAyMB3pvby50
+YWKUaA1oDmgPaA5oEE51YmWMC3JlY2VudF91cmxzlF2UjBNzYXZlZFdpZGdldEdlb21ldHJ5lENC
+AdnQywADAAAAAAKTAAAAygAABOwAAAMWAAAClAAAAPAAAATrAAADFQAAAAAAAAAAB4AAAAKUAAAA
+8AAABOsAAAMVlIwLc2hlZXRfbmFtZXOUfZSMBnNvdXJjZZRLAIwDdXJslGgOjA1kb21haW5fZWRp
+dG9ylH2UjAtfX3ZlcnNpb25fX5RLAYwQY29udGV4dF9zZXR0aW5nc5RdlCiMFW9yYW5nZXdpZGdl
+dC5zZXR0aW5nc5SMB0NvbnRleHSUk5QpgZR9lCiMBnZhbHVlc5R9lCiMCXZhcmlhYmxlc5RdlGg+
+fZRoSl2UKF2UKIwFTGVudGiUjBRPcmFuZ2UuZGF0YS52YXJpYWJsZZSMEkNvbnRpbnVvdXNWYXJp
+YWJsZZSTlEsCaA6IZV2UKIwNVG90YWwgU3RyaW5nc5RoUksCaA6IZV2UKIwNUGVyZmVjdCBNYXRj
+aJRoUksCaA6IZV2UKIwEMSBNTZRoUksAaA6IZV2UKIwEMiBNTZRoUksAaA6IZV2UKIwEMyBNTZRo
+UksAaA6IZV2UKIwENCBNTZRoUksAaA6IZV2UKIwEQ0ZEUJRoUksAjAQwLCAxlIhlXZQojARDRkQx
+lGhSSwBoDohlXZQojARDRkQylGhSSwBoDohlXZQojARDRkQzlGhSSwBoDohlXZQojARDRkQ0lGhS
+SwBoDohlXZQojAZXZWlnaHSUaFJLAGgOiGVdlCiMBUNsYXNzlGhQjBBEaXNjcmV0ZVZhcmlhYmxl
+lJOUSwGMN0Z1bGwgaW50ZW5zaXZlLCBIZWFsdGh5LCBMZXNzIGludGVuc2l2ZSwgU2VtaSBpbnRl
+bnNpdmWUiWVdlCiMCFNlcXVlbmNllGhQjA5TdHJpbmdWYXJpYWJsZZSTlEsCaA6JZWVzaEBLAXWM
+CmF0dHJpYnV0ZXOUKIwFTGVudGiUSwKGlIwNVG90YWwgU3RyaW5nc5RLAoaUjA1QZXJmZWN0IE1h
+dGNolEsChpSMBDEgTU2USwKGlIwEMiBNTZRLAoaUjAQzIE1NlEsChpSMBDQgTU2USwKGlIwEQ0ZE
+UJRdlCiMATCUjAExlGWGlIwEQ0ZEMZRLAoaUjARDRkQylEsChpSMBENGRDOUSwKGlIwEQ0ZENJRL
+AoaUjAZXZWlnaHSUSwKGlIwFQ2xhc3OUXZQojA5GdWxsIGludGVuc2l2ZZSMB0hlYWx0aHmUjA5M
+ZXNzIGludGVuc2l2ZZSMDlNlbWkgaW50ZW5zaXZllGWGlHSUjAVtZXRhc5SMCFNlcXVlbmNllEsD
+hpSFlIwKY2xhc3NfdmFyc5QpjBJtb2RpZmllZF92YXJpYWJsZXOUXZR1YmhFKYGUfZQoaEh9lCiM
+CXZhcmlhYmxlc5RdlIwNZG9tYWluX2VkaXRvcpR9lGilXZQoXZQojAVMZW50aJRoUksAaA6IZV2U
+KIwNVG90YWwgU3RyaW5nc5RoUksAaA6IZV2UKIwNUGVyZmVjdCBNYXRjaJRoUksAaA6IZV2UKIwE
+MSBNTZRoUksAaA6IZV2UKIwEMiBNTZRoUksAaA6IZV2UKIwEMyBNTZRoUksAaA6IZV2UKIwENCBN
+TZRoUksAaA6IZV2UKIwEQ0ZEUJRoUksAjAQwLCAxlIhlXZQojARDRkQxlGhSSwBoDohlXZQojARD
+RkQylGhSSwBoDohlXZQojARDRkQzlGhSSwBoDohlXZQojARDRkQ0lGhSSwBoDohlXZQojAZXZWln
+aHSUaFJLAGgOiGVdlCiMBUNsYXNzlGhvSwGMN0Z1bGwgaW50ZW5zaXZlLCBIZWFsdGh5LCBMZXNz
+IGludGVuc2l2ZSwgU2VtaSBpbnRlbnNpdmWUiWVdlCiMB0NsYXNzLTGUaFJLA2gOiGVdlCiMCFNl
+cXVlbmNllGh0SwJoDollZXNoQEsBdWh1KGirSwKGlGitSwKGlGivSwKGlGixSwKGlGizSwKGlGi1
+SwKGlGi3SwKGlGi5XZQoaIZoh2WGlGi8SwKGlGi+SwKGlGjASwKGlGjCSwKGlGjESwKGlGjGXZQo
+jA5GdWxsIGludGVuc2l2ZZSMB0hlYWx0aHmUjA5MZXNzIGludGVuc2l2ZZSMDlNlbWkgaW50ZW5z
+aXZllGWGlGjJSwKGlHSUaJtoy0sDhpSFlGifKWigXZR1YmV1Lg==
+</properties>
+		<properties node_id="1" format="literal">{'activation_index': 3, 'alpha_index': 0, 'auto_apply': True, 'controlAreaVisible': True, 'hidden_layers_input': '100,', 'learner_name': 'Neural Network', 'max_iterations': 20000, 'replicable': True, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x03\x17\x00\x00\x01g\x00\x00\x04h\x00\x00\x02\x9f\x00\x00\x03\x17\x00\x00\x01g\x00\x00\x04h\x00\x00\x02\x9f\x00\x00\x00\x00\x00\x00\x00\x00\x07\x80\x00\x00\x03\x17\x00\x00\x01g\x00\x00\x04h\x00\x00\x02\x9f', 'solver_index': 2, '__version__': 1}</properties>
+		<properties node_id="2" format="pickle">gASVDQEAAAAAAAB9lCiMEmNvbnRyb2xBcmVhVmlzaWJsZZSIjBNzYXZlZFdpZGdldEdlb21ldHJ5
+lENCAdnQywADAAAAAAAAAAAAHQAAB38AAAQFAAAAAAAAAB0AAAd/AAAEBQAAAAACAAAAB4AAAAAA
+AAAAHQAAB38AAAQFlIwJc2VsZWN0aW9ulF2USwBhjAtzY29yZV90YWJsZZR9lIwMc2hvd25fc2Nv
+cmVzlI+UKIwDTVNFlIwGUmVjYWxslIwJUHJlY2lzaW9ulIwCQ0GUjANNQUWUjARSTVNFlIwDQVVD
+lIwCUjKUjAJGMZSQc4wLX192ZXJzaW9uX1+USwGMEGNvbnRleHRfc2V0dGluZ3OUXZR1Lg==
+</properties>
+		<properties node_id="3" format="literal">{'compatibility_mode': False, 'controlAreaVisible': True, 'number_of_folds': 20, 'replacement': False, 'sampleSizeNumber': 10, 'sampleSizePercentage': 80, 'sampleSizeSqlPercentage': 0.1, 'sampleSizeSqlTime': 1, 'sampling_type': 2, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x03A\x00\x00\x01\x16\x00\x00\x049\x00\x00\x02\xca\x00\x00\x03A\x00\x00\x01\x16\x00\x00\x049\x00\x00\x02\xca\x00\x00\x00\x00\x00\x00\x00\x00\x07\x80\x00\x00\x03A\x00\x00\x01\x16\x00\x00\x049\x00\x00\x02\xca', 'selectedFold': 1, 'sql_dl': False, 'stratify': False, 'use_seed': False, '__version__': 2}</properties>
+		<properties node_id="4" format="pickle">gASVMQcAAAAAAAB9lCiMFGNvbXBhcmlzb25fY3JpdGVyaW9ulEsAjBJjb250cm9sQXJlYVZpc2li
+bGWUiIwNY3Zfc3RyYXRpZmllZJSJjAduX2ZvbGRzlEsEjAluX3JlcGVhdHOUSwaMCnJlc2FtcGxp
+bmeUSwKMBHJvcGWURz+5mZmZmZmajAtzYW1wbGVfc2l6ZZRLCowTc2F2ZWRXaWRnZXRHZW9tZXRy
+eZRDQgHZ0MsAAwAAAAABkQAAAI0AAASeAAAC+AAAAZIAAACzAAAEnQAAAvcAAAAAAAAAAAeAAAAB
+kgAAALMAAASdAAAC95SMEnNodWZmbGVfc3RyYXRpZmllZJSJjAh1c2Vfcm9wZZSIjAtzY29yZV90
+YWJsZZR9lIwMc2hvd25fc2NvcmVzlI+UKIwGUmVjYWxslIwJUHJlY2lzaW9ulIwCQ0GUjANNQUWU
+jARSTVNFlIwDQVVDlIwCRjGUjAJSMpSMA01TRZSQc4wLX192ZXJzaW9uX1+USwOMEGNvbnRleHRf
+c2V0dGluZ3OUXZQojBVvcmFuZ2V3aWRnZXQuc2V0dGluZ3OUjAdDb250ZXh0lJOUKYGUfZQojAZ2
+YWx1ZXOUfZQojA9jbGFzc19zZWxlY3Rpb26UjBYoQXZlcmFnZSBvdmVyIGNsYXNzZXMplEr/////
+hpSMDGZvbGRfZmVhdHVyZZROSv7///+GlIwVZm9sZF9mZWF0dXJlX3NlbGVjdGVklIlK/v///4aU
+aA19lGgaSwN1jAphdHRyaWJ1dGVzlCiMBldlaWdodJRLAoaUjAQxIE1NlEsChpSMBDMgTU2USwKG
+lIwENCBNTZRLAoaUjAQyIE1NlEsChpSMBENGRFCUSwKGlIwEQ0ZEMZRLAoaUjARDRkQylEsChpSM
+BENGRDOUSwKGlIwEQ0ZENJRLAoaUjA1QZXJmZWN0IE1hdGNolEsChpR0lIwFbWV0YXOUjAVMZW50
+aJRLAoaUjA1Ub3RhbCBTdHJpbmdzlEsChpSMCFNlcXVlbmNllEsDhpSHlIwKY2xhc3NfdmFyc5SM
+BUNsYXNzlEsBhpSFlHViaB8pgZR9lChoIn2UKIwPY2xhc3Nfc2VsZWN0aW9ulIwWKEF2ZXJhZ2Ug
+b3ZlciBjbGFzc2VzKZRK/////4aUjAxmb2xkX2ZlYXR1cmWUTkr+////hpSMFWZvbGRfZmVhdHVy
+ZV9zZWxlY3RlZJSJSv7///+GlIwLc2NvcmVfdGFibGWUfZRoGksDdWgsKIwEMSBNTZRLAoaUjAQy
+IE1NlEsChpSMBDMgTU2USwKGlIwENCBNTZRLAoaUjARDRkRQlEsChpSMBENGRDGUSwKGlIwEQ0ZE
+MpRLAoaUjARDRkQzlEsChpSMBENGRDSUSwKGlIwGV2VpZ2h0lEsChpR0lGhEKIwFTGVudGiUSwKG
+lIwNVG90YWwgU3RyaW5nc5RLAoaUjA1QZXJmZWN0IE1hdGNolEsChpSMCFNlcXVlbmNllEsDhpR0
+lGhMjAVDbGFzc5RLAYaUhZR1YmgfKYGUfZQoaCJ9lCiMD2NsYXNzX3NlbGVjdGlvbpSMFihBdmVy
+YWdlIG92ZXIgY2xhc3NlcymUSv////+GlIwMZm9sZF9mZWF0dXJllE5K/v///4aUjBVmb2xkX2Zl
+YXR1cmVfc2VsZWN0ZWSUiUr+////hpSMC3Njb3JlX3RhYmxllH2UaBpLA3VoLCiMBUxlbnRolEsC
+hpSMDVRvdGFsIFN0cmluZ3OUSwKGlIwNUGVyZmVjdCBNYXRjaJRLAoaUjAQxIE1NlEsChpSMBDIg
+TU2USwKGlIwEMyBNTZRLAoaUjAQ0IE1NlEsChpSMBENGRFCUSwGGlIwEQ0ZEMZRLAoaUjARDRkQy
+lEsChpSMBENGRDOUSwKGlIwEQ0ZENJRLAoaUjAZXZWlnaHSUSwKGlHSUaESMCFNlcXVlbmNllEsD
+hpSFlGhMjAVDbGFzc5RLAYaUhZR1YmgfKYGUfZQoaCJ9lCiMD2NsYXNzX3NlbGVjdGlvbpSMFihB
+dmVyYWdlIG92ZXIgY2xhc3NlcymUSv////+GlIwMZm9sZF9mZWF0dXJllE5K/v///4aUjBVmb2xk
+X2ZlYXR1cmVfc2VsZWN0ZWSUiUr+////hpSMC3Njb3JlX3RhYmxllH2UaBpLA3VoLCiMBUxlbnRo
+lEsChpSMDVRvdGFsIFN0cmluZ3OUSwKGlIwNUGVyZmVjdCBNYXRjaJRLAoaUjAQxIE1NlEsChpSM
+BDIgTU2USwKGlIwEMyBNTZRLAoaUjAQ0IE1NlEsChpSMBENGRFCUSwKGlIwEQ0ZEMZRLAoaUjARD
+RkQylEsChpSMBENGRDOUSwKGlIwEQ0ZENJRLAoaUjAZXZWlnaHSUSwKGlHSUaESMCFNlcXVlbmNl
+lEsDhpSFlGhMjAVDbGFzc5RLAYaUhZR1YmV1Lg==
+</properties>
+		<properties node_id="5" format="literal">{'auto_commit': True, 'color_by_class': True, 'controlAreaVisible': True, 'dist_color_RGB': (220, 220, 220, 255), 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\xff\xff\xff\xff\xff\xff\xff\xf7\x00\x00\x07\x80\x00\x00\x04\x06\x00\x00\x00\x00\x00\x00\x00\x1d\x00\x00\x07\x7f\x00\x00\x04\x05\x00\x00\x00\x00\x02\x00\x00\x00\x07\x80\x00\x00\x00\x00\x00\x00\x00\x1d\x00\x00\x07\x7f\x00\x00\x04\x05', 'select_rows': True, 'selected_cols': [], 'selected_rows': [], 'show_attribute_labels': True, 'show_distributions': False, '__version__': 2}</properties>
+		<properties node_id="6" format="literal">{'auto_commit': True, 'color_by_class': True, 'controlAreaVisible': True, 'dist_color_RGB': (220, 220, 220, 255), 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\xff\xff\xff\xff\xff\xff\xff\xf7\x00\x00\x07\x80\x00\x00\x04\x06\x00\x00\x00\x00\x00\x00\x00\x1d\x00\x00\x07\x7f\x00\x00\x04\x05\x00\x00\x00\x00\x02\x00\x00\x00\x07\x80\x00\x00\x00\x00\x00\x00\x00\x1d\x00\x00\x07\x7f\x00\x00\x04\x05', 'select_rows': True, 'selected_cols': None, 'selected_rows': None, 'show_attribute_labels': True, 'show_distributions': True, '__version__': 2}</properties>
+		<properties node_id="7" format="literal">{'controlAreaVisible': True, 'currentScriptIndex': 0, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x00\x00\x00\x00\x00\x1d\x00\x00\x07\x7f\x00\x00\x04\x05\x00\x00\x00\x00\x00\x00\x00\x1d\x00\x00\x07\x7f\x00\x00\x04\x05\x00\x00\x00\x00\x02\x00\x00\x00\x07\x80\x00\x00\x00\x00\x00\x00\x00\x1d\x00\x00\x07\x7f\x00\x00\x04\x05', 'scriptLibrary': [{'name': 'Hello world', 'script': 'import os\nimport glob\nimport csv\nfrom array import *\nfrom itertools import zip_longest\nimport pandas as pd\nfrom matplotlib import pylab\nfrom pylab import *\nimport pickle\n#import argparse\nimport re\nimport numpy as np\n\n\ndef revcom(s):\n    basecomp = {\'A\': \'T\', \'C\': \'G\', \'G\': \'C\', \'T\': \'A\',\'U\':\'A\'}\n    letters = list(s[::-1])\n    letters = [basecomp[base] for base in letters]\n    return \'\'.join(letters)\n\n#Unpickle mismatch scores and PAM scores\ndef get_mm_pam_scores():\n    try:\n        mm_scores = pickle.load(open(r"E:\\Papers\\orange model\\mismatch_score.pkl",\'rb\'))\n        pam_scores = pickle.load(open(r"E:\\Papers\\orange model\\pam_scores.pkl",\'rb\'))\n        return (mm_scores,pam_scores)\n    except: \n        raise Exception("Could not find file with mismatch scores or PAM scores")\n\n#Calculates CFD score\ndef calc_cfd(wt,sg,pam):\n    mm_scores,pam_scores = get_mm_pam_scores()\n    score = 1\n    sg = sg.replace(\'T\',\'U\')\n    wt = wt.replace(\'T\',\'U\')\n    s_list = list(sg)\n    wt_list = list(wt)\n    for i,sl in enumerate(s_list):\n        if wt_list[i] == sl:\n            score*=1\n        else:\n            key = \'r\'+wt_list[i]+\':d\'+revcom(sl)+\',\'+str(i+1)\n            score*= mm_scores[key]\n    score*=pam_scores[pam]\n    return (score)\n\n\ndef getcfd(arrayval):\n  global one\n  avg=0\n  total=len(arrayval)\n  if total&gt;0:\n    for i in arrayval:\n      # print(i)\n      mm_scores,pam_scores = get_mm_pam_scores()\n      wt = "TTAACAATCGGGTCTAAGAT"+"GGG"\n      off = i+"GGG"\n      m_wt = re.search(\'[^ATCG]\',wt)\n      m_off = re.search(\'[^ATCG]\',off)\n      if (m_wt is None) and (m_off is None):\n        pam = off[-2:]\n        sg = off[:-3]\n        cfd_score = calc_cfd(wt,sg,pam)\n        # print ("CFD score: "+str(cfd_score))\n        avg=avg+cfd_score\n    print("total score : " +str(avg)+ " Total mismatches : "+ str(total) )\n    avg11=avg/total\n    print(avg11)\n    one=avg11\n  else:\n    avg11=0\n    one=avg11\n\n\n\na="CCATCCTACCCGATGGTCAGATCATGATGCTTTATACTGGTGACACTGATGATTATGTGCAAGTGCAAAATCTTGCGTACCCCGCCAACTTATCTGATCCTCTCCTTCTAGACTGGGTCAAGTAGGCAAAGGCAACCCGGTTCTGGTTCCTCCACCCGGCATTGGTGTCAAGGACTTTAGAGACCCGACCACTGCTTGGACCGGACCCCAAAATGGGCAATGGCTTGTAAAACGGGTATTGCACTTGTTTATGAAACTTCAAACTTGCCATTGCCCATTTTGGGGTCCGGTCCAAGCAGTGGTCGGGTCTCTAAAGTCCTTGACACCAATGCCGGGTGGAGGAACCAGAACCGGGTTGCCTTTGCCAATTTAGACCCGATTGTTAATACTTGACCCAGTCTAGAAGGAGAGGATCAGATAAGTTGGCGGGGTACGCAAGATTTTGCACTTGCACATAATCATCAGTGTCACCAGTATAAAGCATCATGATCTGACCATCGGGTAGGATGGTAGCGGACCCAGTCCAGACCCCGTTAATATCGTACCATTGATCAGGAACCATGGCAAAAGGCAAGTAGAGCCAGTGGATCAACCAATCTTAGACCCGATTGTTAAGTCCTTGGATACGGCATGGCCCCATGTGATATTTCCCCAAATAGCTGAATCTGGATTGTATTGATAAAAAAGATGATACCATCCCTTGTGGTACAATGGACCACAAGCTTTAAGCTATTGGATGAAGTGCTGCATGCGGTTCCGGGTACGGGTATGTGGGAGTGTGTGGACTTTTACCCGGTATCGACCGAAAAAACAAACGGGTTGGACACATCATATAACGGCCCGGGTGTAAAGCATGTGTTAAAAGCAAGTTTAGATGACAATAAGCAAGATCACTATGCTATTGGGACGTATGACTTGACAAAGAACAAATGGACACCCGATAACCCGGAATTGGATTGTGGAATTGGGTTGAAGCTGGATTATGGGAAATATTATGCATCAAAGACATTTTATGACCCGAAGAAACAACGAAGAGTACTGTGGGGATGGATTGGGGAAACTGATAGTGAATCTGCTGACCTGCAGAAGGGATGGGCATCTGTACAGATCACTATGCTGGTATTGGGACGTATGACTCTGATAGTGAATCTGCTGACCTATTCTTTTTTATCAATACAATATCACTATGCTATTGAGCTATTGGATGAAGTGATGTCCATTGTACCACAAGGGATGGTATCATCTTTTTTATCAATACAATCCAGATTCAGCTATTTGGGGAAATATCACATGGGGCCATGCCGTATCCAAGGACTTGATCCACTGGCTCTACTTGCCTTTTGCCATGGTTCCTGATCAATGGTACGATATTAACGGGGTCTGGACTGGGTCCGCTACCATCCTACCCGATGGTCAGATCATGATGCTTTATACTGGTGACACTGATGATTATGTGCAAGTGCAAAATCTTGCGTACCCCGCCAACTTATCTGATCCTCTCCTTCTAGACTGGGTCAAGTAGGCAAAGGCAACCCGGTTCTGGTTCCTCCACCCGGCATTGGTGTCAAGGACTTTAGAGACCCGACCACTGCTTGGACCGGACCCCAAAATGGGCAATGGCTTGTAAAACGGGTATTGCACTTGTTTATGAAACTTCAAACTTGCCATTGCCCATTTTGGGGTCCGGTCCAAGCAGTGGTCGGGTCTCTAAAGTCCTTGACACCAATGCCGGGTGGAGGAACCAGAACCGGGTTGCCTTTGCCAATTTAGACCCGATTGTTAATACTTGACCCAGTCTAGAAGGAGAGGATCAGATAAGTTGGCGGGGTACGCAAGATTTTGCACTTGCACATAATCATCAGTGTCACCAGTATAAAGCATCATGATCTGACCATCGGGTAGGATGGTAGCGGACCCAGTCCAGACCCCGTTAATATCGTACCATTGATCAGGAACCATGGCAAAAGGCAAGTAGAGCCAGTGGATCAACCAATCTTAGACCCGATTGTTAAGTCCTTGGATACGGCATGGCCCCATGTGATATTTCCCCAAATAGCTGAATCTGGATTGTATTGATAAAAAAGATGATACCATCCCTTGTGGTACAATGGACCACAAGCTTTAAGCTATTGGATGAAGTGCTGCATGCGGTTCCGGGTACGGGTATGTGGGAGTGTGTGGACTTTTACCCGGTATCGACCGAAAAAACAAACGGGTTGGACACATCATATAACGGCCCGGGTGTAAAGCATGTGTTAAAAGCAAGTTTAGATGACAATAAGCAAGATCACTATGCTATTGGGACGTATGACTTGACAAAGAACAAATGGACACCCGATAACCCGGAATTGGATTGTGGAATTGGGTTGAAGCTGGATTATGGGAAATATTATGCATCAAAGACATTTTATGACCCGAAGAAACAACGAAGAGTACTGTGGGGATGGATTGGGGAAACTGATAGTGAATCTGCTGACCTGCAGAAGGGATGGGCATCTGTACAGATCACTATGCTGGTATTGGGACGTATGACTCTGATAGTGAATCTGCTGACCTATTCTTTTTTATCAATACAATATCACTATGCTATTGAGCTATTGGATGAAGTGATGTCCATTGTACCACAAGGGATGGTATCATCTTTTTTATCAATACAATCCAGATTCAGCTATTTGGGGAAATATCACATGGGGCCATGCCGTATCCAAGGACTTGATCCACTGGCTCTACTTGCCTTTTGCCATGGTTCCTGATCAATGGTACGATATTAACGGGGTCTGGACTGGGTCCGCTACCATCCTACCCGATGGTCAGATCATGATGCTTTATACTGGTGACACTGATGATTATGTGCAAGTGCAAAATCTTGCGTACCCCGCCAACTTATCTGATCCTCTCCTTCTAGACTGGGTCAAGTAGGCAAAGGCAACCCGGTTCTGGTTCCTCCACCCGGCATTGGTGTCAAGGACTTTAGAGACCCGACCACTGCTTGGACCGGACCCCAAAATGGGCAATGGCTTGTAAAACGGGTATTGCACTTGTTTATGAAACTTCAAACTTGCCATTGCCCATTTTGGGGTCCGGTCCAAGCAGTGGTCGGGTCTCTAAAGTCCTTGACACCAATGCCGGGTGGAGGAACCAGAACCGGGTTGCCTTTGCCAATTTAGACCCGATTGTTAATACTTGACCCAGTCTAGAAGGAGAGGATCAGATAAGTTGGCGGGGTACG"\nseq=[]\nseq.insert(0,a)\nprint(len(a))\nlenths=[]\nlenths.insert(0,len(a))\npm=0\nmm1=0\nadd=0\nadd2=0\nadd3=0\nadd4=0\nmm2=0\nmm3=0\nmm4=0\nonemis=[]\ntwomis=[]\nthreemis=[]\nfourmis=[]\npmm=[]\nmmm1=[]\nmmm2=[]\nmmm3=[]\nmmm4=[]\npmmm=[]\nmmmm1=[]\nmmmm2=[]\nmmmm3=[]\nmmmm4=[]\n\n\ncount2=0\narray1 = []\nper=[]\nm1=[]\nm2=[]\nm3=[]\nm4=[]\nm5=[]\nb=[]\ninxa=[]\ninxb=[]\ninxc=[]\ninxd=[]\ninxe=[]\nstring="TTAACAATCGGGTCTAAGAT"\nfor i in range(len(a)):\n    if len(a)-i&gt;=20:\n        #print(i)\n        count=i+20\n        c=a[i:count]\n        #print(c)\n        b.insert(i,c) \n        # getcfd(c)\n        #comparing by ==\n        # if c== string:\n        # print("Perfect match")\n    \n# print(b[0])\n\nfor i in range(len(b)):\n  array1=[]\n  count2 = 0\n  if b[i]==string:\n    # print("Perfect Match")\n    per.insert(i,1)\n    # print(b[i])\n    pm=pm+1\n    \n  else:\n    per.insert(i,0)\n    justi=b[i]\n    count2=0\n    for j in range(len(justi)):\n      if count2&gt;4:\n        # print(string)\n        # print(justi)\n        break\n      else:\n        if justi[j]!=string[j]:\n          count2=count2+1\n          array1.insert(count2,j)\n          \n    if count2 !=0:\n      # print(string)\n      # print(justi)\n      # print("Miss match-",count2)\n      if count2 ==1:\n        mm1=mm1+1\n        add=add+1\n        onemis.insert(add,b[i])\n      elif count2 ==2:\n        mm2=mm2+1\n        add2=add+1\n        twomis.insert(add,b[i])\n      elif count2 ==3:\n        mm3=mm3+1\n        add3=add+1\n        threemis.insert(add,b[i])\n      elif count2 ==4:\n        add4=add+1\n        fourmis.insert(add,b[i])\n        mm4=mm4+1\n      # print(array1)\n      # print(len(array1))\n  if count2 and len(array1)==1:\n    m1.insert(i,1)\n    m2.insert(i,0)\n    m3.insert(i,0)\n    m4.insert(i,0)\n    m5.insert(i,0)\n    inxa.insert(i,array1[0])\n    inxb.insert(i,-1)\n    inxc.insert(i,-1)\n    inxd.insert(i,-1)\n    inxe.insert(i,-1)\n  elif count2 and len(array1)==2:\n    m1.insert(i,0)\n    m2.insert(i,1)\n    m3.insert(i,0)\n    m4.insert(i,0)\n    m5.insert(i,0)\n    inxa.insert(i,array1[0])\n    inxb.insert(i,array1[1])\n    inxc.insert(i,-1)\n    inxd.insert(i,-1)\n    inxe.insert(i,-1)\n  elif count2 and len(array1)==3:\n    m1.insert(i,0)\n    m2.insert(i,0)\n    m3.insert(i,1)\n    m4.insert(i,0)\n    m5.insert(i,0)\n    inxa.insert(i,array1[0])\n    inxb.insert(i,array1[1])\n    inxc.insert(i,array1[2])\n    inxd.insert(i,-1)\n    inxe.insert(i,-1)\n  elif count2 and len(array1)==4:\n    m1.insert(i,0)\n    m2.insert(i,0)\n    m3.insert(i,0)\n    m4.insert(i,1)\n    m5.insert(i,0)\n    inxa.insert(i,array1[0])\n    inxb.insert(i,array1[1])\n    inxc.insert(i,array1[2])\n    inxd.insert(i,array1[3])\n    inxe.insert(i,-1)\n  elif count2 and len(array1)==5:\n    m1.insert(i,0)\n    m2.insert(i,0)\n    m3.insert(i,0)\n    m4.insert(i,0)\n    m5.insert(i,1)\n    inxa.insert(i,array1[0])\n    inxb.insert(i,array1[1])\n    inxc.insert(i,array1[2])\n    inxd.insert(i,array1[3])\n    inxe.insert(i,array1[4])\n  else:\n    m1.insert(i,0)\n    m2.insert(i,0)\n    m3.insert(i,0)\n    m4.insert(i,0)\n    m5.insert(i,0)\n    inxa.insert(i,-1)\n    inxb.insert(i,-1)\n    inxc.insert(i,-1)\n    inxd.insert(i,-1)\n    inxe.insert(i,-1) \npm1=pm*1\n\n# mm11=mm1*0.5\n# mm22=mm2*0.25\n# mm33=mm3*0.12\n# mm44=mm4*0.06\n# cp=[]\n# # c1=[]\n# # c2=[]\n# # c3=[]\n# # c4=[]\n# cp.insert(0,pm1)\n# c1.insert(0,mm11)\n# c2.insert(0,mm22)\n# c3.insert(0,mm33)\n# c4.insert(0,mm44)\n\n# samplee = [cp, c1, c2, c3, c4]\n# y=0\n# y=np.std(samplee)\n# ee=[]\n# ee.insert(0,y)\n\n\nbb=[]\nbb.insert(0,len(b))\npmm.insert(0,pm)\nmmm1.insert(0,mm1)\nmmm2.insert(0,mm2)\nmmm3.insert(0,mm3)\nmmm4.insert(0,mm4)\n\npmmm1=0\nmmmmm1=0\nmmmmm2=0\nmmmmm3=0\nmmmmm4=0\nif pm &gt;0:\n  pmmm1=pm*1/pm\nelse:\n  pmmm1=0\n# if mm1 &gt;0:\n#   mmmmm1=mm1*0.5/mm1\n# else:\n#   mmmmm1=0\n# if mm2 &gt;0:\n#   mmmmm2=mm2*0.25/mm2\n# else:\n#   mmmmm2=0\n# if mm3 &gt;0:\n#   mmmmm3=mm3*0.12/mm3\n# else:\n#   mmmmm3=0\n# if mm4 &gt;0:\n#   mmmmm4=mm4*0.06/mm4\n# else:\n#   mmmmm4=0\naver=[]\ngetcfd(onemis)\n\naver.insert(0,one)\nprint("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")\ngetcfd(twomis)\naver.insert(1,one)\nprint("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")\ngetcfd(threemis)\naver.insert(2,one)\nprint("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")\ngetcfd(fourmis)\naver.insert(3,one)\n\nonee=aver[0]\ntwo=aver[1]\nthre=aver[2]\nfour=aver[3]\n\npmmm.insert(0,pmmm1)\nmmmm1.insert(0,onee)\nmmmm2.insert(0,two)\nmmmm3.insert(0,thre)\nmmmm4.insert(0,four)\n\nweight=0\nweight=((onee*1)+(two*0.5)+(thre*0.25)+(four*0.125))/1.875\nweighte=[]\nweighte.insert(0,weight)\n#if pmmm1 ==1:\n#   clas="Full intensive"\n#elif  weight&gt;0 and weight&lt;0.5:\n#  clas="Less intensive"\n#elif  weight&gt;0.5 and weight&lt;1:\n#  clas="Heigh intensive"\n#elif  weight==0 and pmmm1==0:\n#  clas="Healthy"\n#cal=[]\n#cal.insert(0,clas)\n\n# sample = [pmmm, mmmm1, mmmm2, mmmm3, mmmm4]\n# # x=0\n# # x=np.std(sample)\n# # e=[]\n# # e.insert(0,x)\nfinal=[]\nfinal.insert(0,seq)\nfinal.insert(1,lenths)\nfinal.insert(2,bb)\nfinal.insert(3,pmm)\nfinal.insert(4,mmm1)\nfinal.insert(5,mmm2)\nfinal.insert(6,mmm3)\nfinal.insert(7,mmm4)\nfinal.insert(8,pmmm)\nfinal.insert(9,mmmm1)\nfinal.insert(10,mmmm2)\nfinal.insert(11,mmmm3)\nfinal.insert(12,mmmm4)\nfinal.insert(13,weighte)\nimport numpy as np\n#data = np.mat(final).reshape(1, int(np.prod(np.mat(final).shape) )).T\n# Also, you can turn it into Data Frame:\nimport pandas as pd\ndf = pd.DataFrame({\'Sequence\': final[0],\'Lenth\': final[1],\'Total Strings\': final[2],\'Perfect Match\': final[3],\'1 MM\': final[4],\'2 MM\': final[5],\'3 MM\': final[6],\'4 MM\': final[7],\'CFDP\': final[8],\'CFD1\': final[9],\'CFD2\': final[10],\'CFD3\': final[11],\'CFD4\': final[12],\'Weight\': final[13]})\nfor index, row in df.iterrows():\n    print(row[\'Sequence\'],row[\'Lenth\'],row[\'Total Strings\'],row[\'Perfect Match\'],row[\'1 MM\'],row[\'2 MM\'],row[\'3 MM\'],row[\'4 MM\'],row[\'CFDP\'],row[\'CFD1\'],row[\'CFD2\'],row[\'CFD3\'],row[\'CFD4\'],row[\'Weight\'])\n\n\n#df = pd.DataFrame(final)\n#print(df)\nfrom Orange.data.pandas_compat import table_from_frame\n\ntable = table_from_frame(df)\nout_data=table\n#out_data = final[0]\n\n#d = [seq,lenths,bb,pmm, mmm1, mmm2, mmm3, mmm4,pmmm, mmmm1, mmmm2, mmmm3, mmmm4,weighte]\n# d = [seq,lenths,bb,pmm, mmm1, mmm2, mmm3, mmm4,cp,c1,c2,c3,c4,pmmm, mmmm1, mmmm2, mmmm3, mmmm4,e,ee]\n#export_data = zip_longest(*d, fillvalue = \'\')\n#csvfile = r"C:\\Users\\Tausif Ur Rehman\\Downloads\\CFD_Scoring\\dataset2\\dataset8.csv"\n#with open(csvfile, \'w\', encoding="ISO-8859-1", newline=\'\') as myfile:\n#      wr = csv.writer(myfile)\n#      wr.writerow(["Sequence","Lenth","Total Strings","Perfect Match","1 MM","2 MM","3 MM","4 MM","CFDP","CFD1","CFD2","CFD3","CFD4","Weight"])\n#      wr.writerows(export_data)\n#myfile.close()\n\n', 'filename': None}], 'scriptText': 'import os\nimport glob\nimport csv\nfrom array import *\nfrom itertools import zip_longest\nimport pandas as pd\nfrom matplotlib import pylab\nfrom pylab import *\nimport pickle\n#import argparse\nimport re\nimport numpy as np\n\n\ndef revcom(s):\n    basecomp = {\'A\': \'T\', \'C\': \'G\', \'G\': \'C\', \'T\': \'A\',\'U\':\'A\'}\n    letters = list(s[::-1])\n    letters = [basecomp[base] for base in letters]\n    return \'\'.join(letters)\n\n#Unpickle mismatch scores and PAM scores\ndef get_mm_pam_scores():\n    try:\n        mm_scores = pickle.load(open(r"E:\\Papers\\orange model\\mismatch_score.pkl",\'rb\'))\n        pam_scores = pickle.load(open(r"E:\\Papers\\orange model\\pam_scores.pkl",\'rb\'))\n        return (mm_scores,pam_scores)\n    except: \n        raise Exception("Could not find file with mismatch scores or PAM scores")\n\n#Calculates CFD score\ndef calc_cfd(wt,sg,pam):\n    mm_scores,pam_scores = get_mm_pam_scores()\n    score = 1\n    sg = sg.replace(\'T\',\'U\')\n    wt = wt.replace(\'T\',\'U\')\n    s_list = list(sg)\n    wt_list = list(wt)\n    for i,sl in enumerate(s_list):\n        if wt_list[i] == sl:\n            score*=1\n        else:\n            key = \'r\'+wt_list[i]+\':d\'+revcom(sl)+\',\'+str(i+1)\n            score*= mm_scores[key]\n    score*=pam_scores[pam]\n    return (score)\n\n\ndef getcfd(arrayval):\n  global one\n  avg=0\n  total=len(arrayval)\n  if total&gt;0:\n    for i in arrayval:\n      # print(i)\n      mm_scores,pam_scores = get_mm_pam_scores()\n      wt = "TTAACAATCGGGTCTAAGAT"+"GGG"\n      off = i+"GGG"\n      m_wt = re.search(\'[^ATCG]\',wt)\n      m_off = re.search(\'[^ATCG]\',off)\n      if (m_wt is None) and (m_off is None):\n        pam = off[-2:]\n        sg = off[:-3]\n        cfd_score = calc_cfd(wt,sg,pam)\n        # print ("CFD score: "+str(cfd_score))\n        avg=avg+cfd_score\n    print("total score : " +str(avg)+ " Total mismatches : "+ str(total) )\n    avg11=avg/total\n    print(avg11)\n    one=avg11\n  else:\n    avg11=0\n    one=avg11\n\n\n\na="AATTAACAAGCGGGTCTAAGATTATCACTATGCTATTGAGCTATTGGATGAAGTGATAAAACAATCGGGTCTAAGATGTCCATTGTACCACAAGGGATGGTATCATCTTTTTTATCAATACAATCCAGATTCAGCTATTTGGGGAAATATCACATGGGGCCATGCCGTATCCAAGGACTTGATCCACTGGCTCTACTTGCCTTTTGCCATGGTTCCTGATCAATGGTACGATATTAACGGGGTCTGGACTGGGTCCGCTACCATCCTACCCGATGGTCAGATCATGATGCTTTATACTGGTGACACTGATGATTATGTGCAAGTGCAAAATCTTGCGTACCCCGCCAACTTATCTGATCCTCTCCTTCTAGACTGGGTCAAGTAGGCAAAGGCAACCCGGTTCTGGTTCCTCCACCCGGCATTGGTGTCAAGGACTTTAGAGACCCGACCACTGCTTGGACCGGACCCCAAAATGGGCAATGGCTTGTTTAACAATCGGGTCTAAATTAAAACGGGTATTGCACTTGTTTATGAAACTTCAAACTTGCCATTGCCCATTTTGGGGTCCGGTCCAAGCAGTGGTCGGGTCTCTAAAGTCCTTGACACCAATGCCGGGTGGAGGAACCAGAACCGGGTTGCCTTTGCCAATTTAGACCCGATTGTTAATACTTGACCCAGTCTAGAAGGAGAGGATCAGATAAGTTGGCGGGGTACGTTAACAATCGGGTCTAAGAGCAAGATTTTGCACTTGCACATAATCATCAGTGTCACCAGTATAAAGCATCATGATCTGACCATCGGGTAGGATGGTAGCGGACCCAGTCCAGACCCCGTTAATATCGTACCATTGATCAGGAACCATGGCAAAAGGCAAGTAGAGCCAGTGGATCAACCAATCTTAGACCCGATTGTTAAGTCCTTGGATACGGCATGGCCCCATGTGATATTTCCCCAAATAGCTGAATCTGGATTGTATTGATAAAAAAGATGATACCATCCCTTGTGGTACAATGGACCACAAGCTTTGACGATCGGTTCTAAGATTTAAGCTATTGGATGAAGTGCTGCATGCGGTTCCGGGTACGGGTATGTGGGAGTGTGTGGACTTTTACCCGGTATCGACCGAAAAAACAAACGGGTTGGACACATCATATAACGGCCCGGGTGTAAAGCATGTGTTAAAAGCAAGTTTAGATGACAATAAGCAAGATCACTATGCTATTATATCAAACGGGTCTAGGATGGGACGTATGACTTGACAAAGAACAAATGGACACCCGATAACCCGGAATTGGATTGTGGAATTGGGTTGAAGCTGGATTATGGGAAATATTATGCATCAAAGACATTTTATGACCCGAAGAAACAACGAAGAGTACTGTGGGGATGGATTGGGGAAACTGATAGTGAATCTGCTGACCTGCAGAAGGGATGGGCATCTGTACAGATCACTATGCTGGTATTGGGACGTATGACTCTGATAGTGAATCTGCTGACCTATTCTTTTTTATCAATACAATATCACTATGCTATTGAGCTATTGGATGAAGTGATACAACAATCGGGTCTAAGATGTCCATTGTACCACAAGGGATGGTATCATCTTTTTTATCAATACAATCCAGATTCAGCTATTTGGGGAAATATCACATGGGGCCATGCCGTATCCAAGGACTTGATCCACTGGCTCTACTTGCCTTTTGCCATGGTTCCTGATCAATGGTACGATATTAACGGGGTCTGGACTGGGTCCGCTACCATCCTACCCGATGGTCAGATCATGATGCTTTATACTGGTGACACTGATGATTATGTGCAAGTGCAAAATCTTGCGTACCCCGCCAACTTATCTGATCCTCTCCTTCTAGACTGGGTCAAGTAGGCAAAGGCAACCCGGTTCTGGTTCCTCCACCCGGCATTGGTGTCAAGGACTTTAGAGACCCGACCACTGCTTGGACCGGACCCCAAAATGGGCAATGGCTTGTTTAACAATCGGGTCTAAATTAAAACGGGTATTGCACTTGTTTATGAAACTTCAAACTTGCCATTGCCCATTTTGGGGTCCGGTCCAAGCAGTGGTCGGGTCTCTAAAGTCCTTGACACCAATGCCGGGTGGAGGAACCAGAACCGGGTTGCCTTTGCCAATTTAGACCCGATTGTTAATACTTGACCCAGTCTAGAAGGAGAGGATCAGATAAGTTGGCGGGGTACGTTAACAATCGGGTCTAAGAGCAAGATTTTGCACTTGCACATAATCATCAGTGTCACCAGTATAAAGCATCATGATCTGACCATCGGGTAGGATGGTAGCGGACCCAGTCCAGACCCCGTTAATATCGTACCATTGATCAGGAACCATGGCAAAAGGCAAGTAGAGCCAGTGGATCAACCAATCTTAGACCCGATTGTTAAGTCCTTGGATACGGCATGGCCCCATGTGATATTTCCCCAAATAGCTGAATCTGGATTGTATTGATAAAAAAGATGATACCATCCCTTGTGGTACAATGGACCACAAGCTTTGACGATCGGTTCTAAGATTTAAGCTATTGGATGAAGTGCTGCATGCGGTTCCGGGTACGGGTATGTGGGAGTGTGTGGACTTTTACCCGGTATCGACCGAAAAAACAAACGGGTTGGACACATCATATAACGGCCCGGGTGTAAAGCATGTGTTAAAAGCAAGTTTAGATGACAATAAGCAAGATCACTATGCTATTATATCAAACGGGTCTAGGATGGGACGTATGACTTGACAAAGAACAAATGGACACCCGATAACCCGGAATTGGATTGTGGAATTGGGTTGAAGCTGGATTATGGGAAATATTATGCATCAAATGGTATTGGGACGTATGACTCTGATAGTGAATCTGCTGACCTATTCTTTTTTATCAATACAATATCACTATGCTATTGAGCTATTGGATGAAGTGATAGAACAATCGGGTCTAAGATGTCCATTGTACCACAAGGGATGGTATCATCTTTTTTATCAATACAATCCAGATTCAGCTATTTGGGGAAATATCACATGGGGCCATGCCGTATCCAAGGACGATCCACTGGCTCTACTTGCCTTTTGCCATGGTTCCTGATCAATGGTACGATATTAACGGGGTCTGGACTGGGTCCGCTACCATCCTACCCGATGGTCAGATCATGATGCTTTATACTGGTGACACTGATGATTATGTGCAAGTGCAAAATCTTGCGTACCCCGCCAACTTATCTGATCCTCTCCTTCTAGACTGGGTCAAGTAGGCAAAGGCAACCCGGTTCTGGTTCCTCCACCCGGCATTGGTGTCAAGGACTTTAGAGACCCGACCACTGCTTGGACCGGACCCCAAAATGGGCAATGGCTTGTTTAACAATCGGGTCTAAATTAAAACGGGTATTGCACTTGTTTATGAAACTTCAAACTTGCCATTGCCCATTTTGGGGTCCGGTCCAAGCAGTGGTCGGGTCTCTAAAGTCCTTGACACCAATGCCGGGTGGAGGAACCAGAACCGGGTTGCCTTTGCCAATTTAGACCCGATTGTTAATACTTGACCCAGTCTAGAAGGAGAGGATCAGATAAGTTGGCGGGGTACGTTAACAATCGGGTCTAAGAGCAAGATTTTGCACTTGCACATAATCATCAGTGTCACCAGTATAAAGCATCATGATCTGACCATCGGGTAGGATGGTAGCGGACCCAGTCCAGACCCCGTTAATATCGTACCATTGATCAGGAACCATGGCAAAAGGCAAGTAGAGCCAGTGGATCAACCAATCTTAGACCCGATTGTTAAGTCCTTGGATACGGCATGGCCCCATGTGATATTTCCCCAAATAGCTGAATCTGGATTGTATTGATAAAAAAGATGATACCATCCCTTGTGGTACAATGGACCACAAGCTTTGACGATCGGTTCTAAGATTTAAGCTATTGGATGAAGTGCTGCATGCGGTTCCGGGTACGGGTATGTGGGAGTGTGTGGACTTTTACCCGGTATCGACCGAAAAAACAAACGGGTTGGACACATCATATAACGGCCCGGGTGTAAAGCATGTGTTAAAAGCAAGTTTAGATGACAATAAGCAAGATCACTATGCTATTATATCAAACGGGTCTAGGATGGGACGTATGACTTGACAAAGAACAAATGGACACCCGATAACCCGGAATTGGATTGTGGAATTGGGTTGAAGCTGGATTATGGGAAATATTATGCATCAAAGACATTTTATGACCCGAAGAAACAACGAAGAGTACTGTGGGGATGGATTGGGGAAACTGATAGTGAATCTGCTGACCTGCAGAAGGGATGGGCATCTGTACAGATCACTATGCTGGTATTGGGACGTATGACTCTGATAGTGAATCTGCTGACCTATTCTTTTTTATCAATACAATATCACTATGCTATTGAGCTATTGGATGAAGTGATCAAACAATCGGGTCTAAGATGTCCATTGTACCACAAGGGATGGTATCATCTTTTTTATCAATACAATCCAGATTCAGCTATTTGGGGAAATATCACATGGGGCCATGCCGTATCCAAGGACTTGATCCACTGGCTCTACTTGCCTTTTGCCATGGTTCCTGATCAATGGTACGATATTAACGGGGTCTGGACTGGGTCCGCTACCATCCTACCCGATGGTCAGATCATGATGCTTTATACTGGTGACACTGATGATTATGTGCAAGTGCAAAATCTTGCGTACCCCGCCAACTTATCTGATCCTCTCCTTCTAGACTGGGTCAAGTAGGCAAAGGCAACCCGGTTCTGGTTCCTCCACCCGGCATTGGTGTCAAGGACTTTAGAGACCCGACCACTGCTTGGACCGGACCCCAAAATGGGCAATGGCTTGTTTAACAATCGGGTCTAAATTAAAACGGGTATTGCACTTGTTTATGAAACTTCAAACTTGCCATTGCCCATTTTGGGGTCCGGTCCAAGCAGTGGTCGGGTCTCTAAAGTCCTTGACACCAATGCCGGGTGGAGGAACCAGAACCGGGTTGCCTTTGCCAATTTAGACCCGATTGTTAATACTTGACCCAGTCTAGAAGGAGAGGATCAGATAAGTTGGCGGGGTACGTTAACAATCGGGTCTAAGAGCAAGATTTTGCACTTGCACATAATCATCAGTGTCACCAGTATAAAGCATCATGATCTGACCATCGGGTAGGATGGTAGCGGACCCAGTCCAGACCCCGTTAATATCGTACCATTGATCAGGAACCATGGCAAAAGGCAAGTAGAGCCAGTGGATCAACCAATCTTAGACCCGATTGTTAAGTCCTTGGATACGGCATGGCCCCATGTGATATTTCCCCAAATAGCTGAATCTGGATTGTATTGATAAAAAAGATGATACCATCCCTTGTGGTACAATGGACCACAAGCTTTGACGATCGGTTCTAAGATTTAAGCTATTGGATGAAGTGCTGCATGCGGTTCCGGGTACGGGTATGTGGGAGTGTGTGGACTTTTACCCGGTATCGACCGAAAAAACAAACGGGTTGGACACATCATATAACGGCCCGGGTGTAAAGCATGTGTTAAAAGCAAGTTTAGATGACAATAAGCAAGATCACTATGCTATTATATCAAACGGGTCTAGGATGGGACGTATGACTTGACAAAGAACAAATGGACACCCGATAACCCGGAATTGGATTGTGGAATTGGGTTGAAGCTGGATTATGGGAAATATTATGCATCAAAGACATTTTATGACCCGAAGAAACAACGAAGAGTACTGTGGGGATGGATTGGGGAAACTGATAGTGAATCTGCTGACCTGCAGAAGGGATGGGCATCTGTACAGATCACTATGCTGGTATTGGGACGTATGACTCTGATAGTGAATCTGCTGACCTATTCTTTTTTATCAATACAATATCACTATGCTATTGAGCTATTGGATGAAGTGATCCAACAATCGGGTCTAAGATGTCCATTGTACCACAAGGGATGGTATCATCTTTTTTATCAATACAATCCAGATTCAGCTATTTGGGGAAATATCACATGGGGCCATGCCGTATCCAAGGACTTGATCCACTGGCTCTACTTGCCTTTTGCCATGGTTCCTGATCAATGGTACGATATTAACGGGGTCTGGACTGGGTCCGCTACCATCCTACCCGATGGTCAGATCATGATGCTTTATACTGGTGACACTGATGATTATGTGCAAGTGCAAAATCTTGCGTACCCCGCCAACTTATCTGATCCTCTCCTTCTAGACTGGGTCAAGTAGGCAAAGGCAACCCGGTTCTGGTTCCTCCACCCGGCATTGGTGTCAAGGACTTTAGAGACCCGACCACTGCTTGGACCGGACCCCAAAATGGGCAATGGCTTGTTTAACAATCGGGTCTAAATTAAAACGGGTATTGCACTTGTTTATGAAACTTCAAACTTGCCATTGCCCATTTTGGGGTCCGGTCCAAGCAGTGGTCGGGTCTCTAAAGTCCTTGACACCAATGCCGGGTGGAGGAACCAGAACCGGGTTGCCTTTGCCAATTTAGACCCGATTGTTAATACTTGACCCAGTCTAGAAGGAGAGGATCAGATAAGTTGGCGGGGTACGTTAACAATCGGGTCTAAGAGCAAGATTTTGCACTTGCACATAATCATCAGTGTCACCAGTATAAAGCATCATGATCTGACCATCGGGTAGGATGGTAGCGGACCCAGTCCAGACCCCGTTAATATCGTACCATTGATCAGGAACCATGGCAAAAGGCAAGTAGAGCCAGTGGATCAACCAATCTTAGACCCGATTGTTAAGTCCTTGGATACGGCATGGCCCCATGTGATATTTCCCCAAATAGCTGAATCTGGATTGTATTGATAAAAAAGATGATACCATCCCTTGTGGTACAATGGACCACAAGCTTTGACGATCGGTTCTAAGATTTAAGCTATTGGATGAAGTGCTGCATGCGGTTCCGGGTACGGGTATGTGGGAGTGTGTGGACTTTTACCCGGTATCGACCGAAAAAACAAACGGGTTGGACACATCATATAACGGCCCGGGTGTAAAGCATGTGTTAAAAGCAAGTTTAGATGACAATAAGCAAGATCACTATGCTATTATATCAAACGGGTCTAGGATGGGACGTATGACTTGACAAAGAACAAATGGACACCCGATAACCCGGAATTGGATTGTGGAATTGGGTTGAAGCTGGATTATGGGAAATATTATGCATCAAAGACATTTTATGACCCGAAGAAACAACGAAGAGTACTGTGGGGATGGATTGGGGAAACTGATAGTGAATCTGCTGACCTGCAGAAGGGATGGGCATCTGTACAGATCACTATGCGTATTGGGACGTATGACTCTGATAGTGAATCTGCTGACCTATTCTTTTTTATCAATACAATATCACTATGCTATTGAGCTATTGGATGAAGTGATCGAACAATCGGGTCTAAGATGTCCATTGTACCACAAGGGATGGTATCATCTTTTTTATCAATACAATCCAGATTCAGCTATTTGGGGAAATATCACATGGGGCCATGCCGTATCCAAGGACTTGATCCACTGGCTCTACTTGCCTTTTGCCATGGTTCCTGATCAATGGTACGATATTAACGGGGTCTGGACTGGGTCCGCTACCATCCTACCCGATGGTCAGATCATGATGCTTTATACTGGTGACACTGATGATTATGTGCAAGTGCAAAATCTTGCGTACCCCGCCAACTTATCTGATCCTCTCCTTCTAGACTGGGTCAAGTAGGCAAAGGCAACCCGGTTCTGGTTCCTCCACCCGGCATTGGTGTCAAGGACTTTAGAGACCCGACCACTGCTTGGACCGGACCCCAAAATGGGCAATGGCTTGTTTAACAATCGGGTCTAAATTAAAACGGGTATTGCACTTGTTTATGAAACTTCAAACTTGCCATTGCCCATTTTGGGGTCCGGTCCAAGCAGTGGTCGGGTCTCTAAAGTCCTTGACACCAATGCCGGGTGGAGGAACCAGAACCGGGTTGCCTTTGCCAATTTAGACCCGATTGTTAATACTTGACCCAGTCTAGAAGGAGAGGATCAGATAAGTTGGCGGGGTACGTTAACAATCGGGTCTAAGAGCAAGATTTTGCACTTGCACATAATCATCAGTGTCACCAGTATAAAGCATCATGATCTGACCATCGGGTAGGATGGTAGCGGACCCAGTCCAGACCCCGTTAATATCGTACCATTGATCAGGAACCATGGCAAAAGGCAAGTAGAGCCAGTGGATCAACCAATCTTAGACCCGATTGTTAAGTCCTTGGATACGGCATGGCCCCATGTGATATTTCCCCAAATAGCTGAATCTGGATTGTATTGATAAAAAAGATGATACCATCCCTTGTGGTACAATGGACCACAAGCTTTGACGATCGGTTCTAAGATTTAAGCTATTGGATGAAGTGCTGCATGCGGTTCCGGGTACGGGTATGTGGGAGTGTGTGGACTTTTACCCGGTATCGACCGAAAAAACAAACGGGTTGGACACATCATATAACGGCCCGGGTGTAAAGCATGTGTTAAAAGCAAGTTTAGATGACAATAAGCAAGATCACTATGCTATTATATCAAACGGGTCTAGGATGGGACGTATGACTTGACAAAGAACAAATGGACACCCGATAACCCGGAATTGGATTGTGGAATTGGGTTGAAGCTGGATTATGGGAAATATTATGCATCAAAGACATTTTATGACCCGAAGAAACAACGAAGAGTACTGTGGGGATGGATTGGGGAAACTGATAGTGAATCTGCTGACCTGCAGAAGGGATGGGCATCTGTACAGATCAC"\nseq=[]\nseq.insert(0,a)\nprint(len(a))\nlenths=[]\nlenths.insert(0,len(a))\npm=0\nmm1=0\nadd=0\nadd2=0\nadd3=0\nadd4=0\nmm2=0\nmm3=0\nmm4=0\nonemis=[]\ntwomis=[]\nthreemis=[]\nfourmis=[]\npmm=[]\nmmm1=[]\nmmm2=[]\nmmm3=[]\nmmm4=[]\npmmm=[]\nmmmm1=[]\nmmmm2=[]\nmmmm3=[]\nmmmm4=[]\n\n\ncount2=0\narray1 = []\nper=[]\nm1=[]\nm2=[]\nm3=[]\nm4=[]\nm5=[]\nb=[]\ninxa=[]\ninxb=[]\ninxc=[]\ninxd=[]\ninxe=[]\nstring="TTAACAATCGGGTCTAAGAT"\nfor i in range(len(a)):\n    if len(a)-i&gt;=20:\n        #print(i)\n        count=i+20\n        c=a[i:count]\n        #print(c)\n        b.insert(i,c) \n        # getcfd(c)\n        #comparing by ==\n        # if c== string:\n        # print("Perfect match")\n    \n# print(b[0])\n\nfor i in range(len(b)):\n  array1=[]\n  count2 = 0\n  if b[i]==string:\n    # print("Perfect Match")\n    per.insert(i,1)\n    # print(b[i])\n    pm=pm+1\n    \n  else:\n    per.insert(i,0)\n    justi=b[i]\n    count2=0\n    for j in range(len(justi)):\n      if count2&gt;4:\n        # print(string)\n        # print(justi)\n        break\n      else:\n        if justi[j]!=string[j]:\n          count2=count2+1\n          array1.insert(count2,j)\n          \n    if count2 !=0:\n      # print(string)\n      # print(justi)\n      # print("Miss match-",count2)\n      if count2 ==1:\n        mm1=mm1+1\n        add=add+1\n        onemis.insert(add,b[i])\n      elif count2 ==2:\n        mm2=mm2+1\n        add2=add+1\n        twomis.insert(add,b[i])\n      elif count2 ==3:\n        mm3=mm3+1\n        add3=add+1\n        threemis.insert(add,b[i])\n      elif count2 ==4:\n        add4=add+1\n        fourmis.insert(add,b[i])\n        mm4=mm4+1\n      # print(array1)\n      # print(len(array1))\n  if count2 and len(array1)==1:\n    m1.insert(i,1)\n    m2.insert(i,0)\n    m3.insert(i,0)\n    m4.insert(i,0)\n    m5.insert(i,0)\n    inxa.insert(i,array1[0])\n    inxb.insert(i,-1)\n    inxc.insert(i,-1)\n    inxd.insert(i,-1)\n    inxe.insert(i,-1)\n  elif count2 and len(array1)==2:\n    m1.insert(i,0)\n    m2.insert(i,1)\n    m3.insert(i,0)\n    m4.insert(i,0)\n    m5.insert(i,0)\n    inxa.insert(i,array1[0])\n    inxb.insert(i,array1[1])\n    inxc.insert(i,-1)\n    inxd.insert(i,-1)\n    inxe.insert(i,-1)\n  elif count2 and len(array1)==3:\n    m1.insert(i,0)\n    m2.insert(i,0)\n    m3.insert(i,1)\n    m4.insert(i,0)\n    m5.insert(i,0)\n    inxa.insert(i,array1[0])\n    inxb.insert(i,array1[1])\n    inxc.insert(i,array1[2])\n    inxd.insert(i,-1)\n    inxe.insert(i,-1)\n  elif count2 and len(array1)==4:\n    m1.insert(i,0)\n    m2.insert(i,0)\n    m3.insert(i,0)\n    m4.insert(i,1)\n    m5.insert(i,0)\n    inxa.insert(i,array1[0])\n    inxb.insert(i,array1[1])\n    inxc.insert(i,array1[2])\n    inxd.insert(i,array1[3])\n    inxe.insert(i,-1)\n  elif count2 and len(array1)==5:\n    m1.insert(i,0)\n    m2.insert(i,0)\n    m3.insert(i,0)\n    m4.insert(i,0)\n    m5.insert(i,1)\n    inxa.insert(i,array1[0])\n    inxb.insert(i,array1[1])\n    inxc.insert(i,array1[2])\n    inxd.insert(i,array1[3])\n    inxe.insert(i,array1[4])\n  else:\n    m1.insert(i,0)\n    m2.insert(i,0)\n    m3.insert(i,0)\n    m4.insert(i,0)\n    m5.insert(i,0)\n    inxa.insert(i,-1)\n    inxb.insert(i,-1)\n    inxc.insert(i,-1)\n    inxd.insert(i,-1)\n    inxe.insert(i,-1) \npm1=pm*1\n\n# mm11=mm1*0.5\n# mm22=mm2*0.25\n# mm33=mm3*0.12\n# mm44=mm4*0.06\n# cp=[]\n# # c1=[]\n# # c2=[]\n# # c3=[]\n# # c4=[]\n# cp.insert(0,pm1)\n# c1.insert(0,mm11)\n# c2.insert(0,mm22)\n# c3.insert(0,mm33)\n# c4.insert(0,mm44)\n\n# samplee = [cp, c1, c2, c3, c4]\n# y=0\n# y=np.std(samplee)\n# ee=[]\n# ee.insert(0,y)\n\n\nbb=[]\nbb.insert(0,len(b))\npmm.insert(0,pm)\nmmm1.insert(0,mm1)\nmmm2.insert(0,mm2)\nmmm3.insert(0,mm3)\nmmm4.insert(0,mm4)\n\npmmm1=0\nmmmmm1=0\nmmmmm2=0\nmmmmm3=0\nmmmmm4=0\nif pm &gt;0:\n  pmmm1=pm*1/pm\nelse:\n  pmmm1=0\n# if mm1 &gt;0:\n#   mmmmm1=mm1*0.5/mm1\n# else:\n#   mmmmm1=0\n# if mm2 &gt;0:\n#   mmmmm2=mm2*0.25/mm2\n# else:\n#   mmmmm2=0\n# if mm3 &gt;0:\n#   mmmmm3=mm3*0.12/mm3\n# else:\n#   mmmmm3=0\n# if mm4 &gt;0:\n#   mmmmm4=mm4*0.06/mm4\n# else:\n#   mmmmm4=0\naver=[]\ngetcfd(onemis)\n\naver.insert(0,one)\nprint("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")\ngetcfd(twomis)\naver.insert(1,one)\nprint("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")\ngetcfd(threemis)\naver.insert(2,one)\nprint("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")\ngetcfd(fourmis)\naver.insert(3,one)\n\nonee=aver[0]\ntwo=aver[1]\nthre=aver[2]\nfour=aver[3]\n\npmmm.insert(0,pmmm1)\nmmmm1.insert(0,onee)\nmmmm2.insert(0,two)\nmmmm3.insert(0,thre)\nmmmm4.insert(0,four)\n\nweight=0\nweight=((onee*1)+(two*0.5)+(thre*0.25)+(four*0.125))/1.875\nweighte=[]\nweighte.insert(0,weight)\n#if pmmm1 ==1:\n#   clas="Full intensive"\n#elif  weight&gt;0 and weight&lt;0.5:\n#  clas="Less intensive"\n#elif  weight&gt;0.5 and weight&lt;1:\n#  clas="Heigh intensive"\n#elif  weight==0 and pmmm1==0:\n#  clas="Healthy"\n#cal=[]\n#cal.insert(0,clas)\n\n# sample = [pmmm, mmmm1, mmmm2, mmmm3, mmmm4]\n# # x=0\n# # x=np.std(sample)\n# # e=[]\n# # e.insert(0,x)\nfinal=[]\nfinal.insert(0,seq)\nfinal.insert(1,lenths)\nfinal.insert(2,bb)\nfinal.insert(3,pmm)\nfinal.insert(4,mmm1)\nfinal.insert(5,mmm2)\nfinal.insert(6,mmm3)\nfinal.insert(7,mmm4)\nfinal.insert(8,pmmm)\nfinal.insert(9,mmmm1)\nfinal.insert(10,mmmm2)\nfinal.insert(11,mmmm3)\nfinal.insert(12,mmmm4)\nfinal.insert(13,weighte)\nimport numpy as np\n#data = np.mat(final).reshape(1, int(np.prod(np.mat(final).shape) )).T\n# Also, you can turn it into Data Frame:\nimport pandas as pd\ndf = pd.DataFrame({\'Sequence\': final[0],\'Lenth\': final[1],\'Total Strings\': final[2],\'Perfect Match\': final[3],\'1 MM\': final[4],\'2 MM\': final[5],\'3 MM\': final[6],\'4 MM\': final[7],\'CFDP\': final[8],\'CFD1\': final[9],\'CFD2\': final[10],\'CFD3\': final[11],\'CFD4\': final[12],\'Weight\': final[13]})\nfor index, row in df.iterrows():\n    print(row[\'Sequence\'],row[\'Lenth\'],row[\'Total Strings\'],row[\'Perfect Match\'],row[\'1 MM\'],row[\'2 MM\'],row[\'3 MM\'],row[\'4 MM\'],row[\'CFDP\'],row[\'CFD1\'],row[\'CFD2\'],row[\'CFD3\'],row[\'CFD4\'],row[\'Weight\'])\n\n\n#df = pd.DataFrame(final)\n#print(df)\nfrom Orange.data.pandas_compat import table_from_frame\n\ntable = table_from_frame(df)\nout_data=table\n#out_data = final[0]\n\n#d = [seq,lenths,bb,pmm, mmm1, mmm2, mmm3, mmm4,pmmm, mmmm1, mmmm2, mmmm3, mmmm4,weighte]\n# d = [seq,lenths,bb,pmm, mmm1, mmm2, mmm3, mmm4,cp,c1,c2,c3,c4,pmmm, mmmm1, mmmm2, mmmm3, mmmm4,e,ee]\n#export_data = zip_longest(*d, fillvalue = \'\')\n#csvfile = r"C:\\Users\\Tausif Ur Rehman\\Downloads\\CFD_Scoring\\dataset2\\dataset8.csv"\n#with open(csvfile, \'w\', encoding="ISO-8859-1", newline=\'\') as myfile:\n#      wr = csv.writer(myfile)\n#      wr.writerow(["Sequence","Lenth","Total Strings","Perfect Match","1 MM","2 MM","3 MM","4 MM","CFDP","CFD1","CFD2","CFD3","CFD4","Weight"])\n#      wr.writerows(export_data)\n#myfile.close()\n\n', 'splitterState': b'\x00\x00\x00\xff\x00\x00\x00\x01\x00\x00\x00\x02\x00\x00\x00}\x00\x00\x00}\x01\xff\xff\xff\xff\x01\x00\x00\x00\x02\x00', '__version__': 2}</properties>
+		<properties node_id="8" format="pickle">gASVmwEAAAAAAAB9lCiMEmFwcGVuZF9wcmVkaWN0aW9uc5SIjBRhcHBlbmRfcHJvYmFiaWxpdGll
+c5SIjAphdXRvY29tbWl0lImMEmNvbnRyb2xBcmVhVmlzaWJsZZSIjBNzYXZlZFdpZGdldEdlb21l
+dHJ5lENCAdnQywADAAAAAAAAAAAAHQAAB38AAAQFAAAAAAAAAB0AAAd/AAAEBQAAAAACAAAAB4AA
+AAAAAAAAHQAAB38AAAQFlIwQc2VsZWN0ZWRfbGVhcm5lcpRdlEsAYYwRc2VsZWN0ZWRfcXVhbnRp
+dHmUSwKMC19fdmVyc2lvbl9flEsBjBBjb250ZXh0X3NldHRpbmdzlF2UjBVvcmFuZ2V3aWRnZXQu
+c2V0dGluZ3OUjAdDb250ZXh0lJOUKYGUfZQojAZ2YWx1ZXOUfZQojAlzZWxlY3Rpb26Uj5RoCksB
+dYwHY2xhc3Nlc5QojA5GdWxsIGludGVuc2l2ZZSMB0hlYWx0aHmUjA5MZXNzIGludGVuc2l2ZZSM
+DlNlbWkgaW50ZW5zaXZllHSUdWJhdS4=
+</properties>
+		<properties node_id="9" format="pickle">gASV7gEAAAAAAAB9lCiMC2F1dG9fY29tbWl0lIiMEmNvbnRyb2xBcmVhVmlzaWJsZZSIjAtkaXNw
+bGF5X3J1Z5SIjAtmb2xkX2N1cnZlc5SJjBJvdXRwdXRfY2FsaWJyYXRpb26USwGME3NhdmVkV2lk
+Z2V0R2VvbWV0cnmUQ0IB2dDLAAMAAAAAAjoAAADjAAAFRgAAAv0AAAI7AAABCQAABUUAAAL8AAAA
+AAAAAAAHgAAAAjsAAAEJAAAFRQAAAvyUjAVzY29yZZRLAYwJdGhyZXNob2xklEc/4AAAAAAAAIwP
+dmlzdWFsX3NldHRpbmdzlH2UjAtfX3ZlcnNpb25fX5RLAYwQY29udGV4dF9zZXR0aW5nc5RdlIwV
+b3Jhbmdld2lkZ2V0LnNldHRpbmdzlIwHQ29udGV4dJSTlCmBlH2UKIwGdmFsdWVzlH2UKIwUc2Vs
+ZWN0ZWRfY2xhc3NpZmllcnOUXZRLAGGMDHRhcmdldF9pbmRleJRLA2gMSwF1jAdjbGFzc2VzlCiM
+DkZ1bGwgaW50ZW5zaXZllIwHSGVhbHRoeZSMDkxlc3MgaW50ZW5zaXZllIwOU2VtaSBpbnRlbnNp
+dmWUdJSMEGNsYXNzaWZpZXJfbmFtZXOUXZSMDk5ldXJhbCBOZXR3b3JrlGF1YmF1Lg==
+</properties>
+		<properties node_id="10" format="pickle">gASV1QUAAAAAAAB9lCiMC2F1dG9fY29tbWl0lIiMCGF2ZXJhZ2VzlIiMFWNvbF9jbHVzdGVyaW5n
+X21ldGhvZJSMBU5vbmVflIwMY29sb3JfY2VudGVylEsAjBBjb2x1bW5fbGFiZWxfcG9zlEsBjBJj
+b250cm9sQXJlYVZpc2libGWUiIwGbGVnZW5klIiMDG1lcmdlX2ttZWFuc5SJjA5tZXJnZV9rbWVh
+bnNfa5RLMowMcGFsZXR0ZV9uYW1llIwVbGluZWFyX2JneXdfMjBfOThfYzY2lIwVcm93X2NsdXN0
+ZXJpbmdfbWV0aG9klGgEjBNzYXZlZFdpZGdldEdlb21ldHJ5lENCAdnQywADAAAAAAF7AAAAdQAA
+BgQAAANrAAABfAAAAJsAAAYDAAADagAAAAAAAAAAB4AAAAF8AAAAmwAABgMAAANqlIwNc2VsZWN0
+ZWRfcm93c5RdlIwOdGhyZXNob2xkX2hpZ2iURz/wAAAAAAAAjA10aHJlc2hvbGRfbG93lEcAAAAA
+AAAAAIwLX192ZXJzaW9uX1+USwOMEGNvbnRleHRfc2V0dGluZ3OUXZQojBVvcmFuZ2V3aWRnZXQu
+c2V0dGluZ3OUjAdDb250ZXh0lJOUKYGUfZQojAZ2YWx1ZXOUfZQojBRhbm5vdGF0aW9uX2NvbG9y
+X3ZhcpROSv7///+GlIwOYW5ub3RhdGlvbl92YXKUTkr+////hpSMG2NvbHVtbl9hbm5vdGF0aW9u
+X2NvbG9yX2tleZROSv7///+GlIwMc3BsaXRfYnlfdmFylIwFQ2xhc3OUS2WGlIwRc3BsaXRfY29s
+dW1uc19rZXmUTkr+////hpRoFEsDdYwKYXR0cmlidXRlc5R9lCiMBldlaWdodJRLAowEMSBNTZRL
+AowEMyBNTZRLAowENCBNTZRLAowEMiBNTZRLAowEQ0ZEUJRLAowEQ0ZEMZRLAowEQ0ZEMpRLAowE
+Q0ZEM5RLAowEQ0ZENJRLAowNUGVyZmVjdCBNYXRjaJRLAmglSwF1jAVtZXRhc5R9lCiMBUxlbnRo
+lEsCjA1Ub3RhbCBTdHJpbmdzlEsCjAhTZXF1ZW5jZZRLA4wOTmV1cmFsIE5ldHdvcmuUSwGMH05l
+dXJhbCBOZXR3b3JrIChGdWxsIGludGVuc2l2ZSmUSwKMGE5ldXJhbCBOZXR3b3JrIChIZWFsdGh5
+KZRLAowfTmV1cmFsIE5ldHdvcmsgKExlc3MgaW50ZW5zaXZlKZRLAowfTmV1cmFsIE5ldHdvcmsg
+KFNlbWkgaW50ZW5zaXZlKZRLAowERm9sZJRLAXV1YmgZKYGUfZQoaBx9lCiMFGFubm90YXRpb25f
+Y29sb3JfdmFylE5K/v///4aUjA5hbm5vdGF0aW9uX3ZhcpROSv7///+GlIwbY29sdW1uX2Fubm90
+YXRpb25fY29sb3Jfa2V5lE5K/v///4aUjAxzcGxpdF9ieV92YXKUjAVDbGFzc5RLZYaUjBFzcGxp
+dF9jb2x1bW5zX2tleZROSv7///+GlGgUSwN1aCl9lCiMBDEgTU2USwKMBDIgTU2USwKMBDMgTU2U
+SwKMBDQgTU2USwKMBENGRFCUSwKMBENGRDGUSwKMBENGRDKUSwKMBENGRDOUSwKMBENGRDSUSwKM
+BldlaWdodJRLAmhLSwF1aDZ9lCiMBUxlbnRolEsCjA1Ub3RhbCBTdHJpbmdzlEsCjA1QZXJmZWN0
+IE1hdGNolEsCjAhTZXF1ZW5jZZRLA4wOTmV1cmFsIE5ldHdvcmuUSwGMH05ldXJhbCBOZXR3b3Jr
+IChGdWxsIGludGVuc2l2ZSmUSwKMGE5ldXJhbCBOZXR3b3JrIChIZWFsdGh5KZRLAowfTmV1cmFs
+IE5ldHdvcmsgKExlc3MgaW50ZW5zaXZlKZRLAowfTmV1cmFsIE5ldHdvcmsgKFNlbWkgaW50ZW5z
+aXZlKZRLAowERm9sZJRLAXV1YmV1Lg==
+</properties>
+		<properties node_id="11" format="pickle">gASVEQIAAAAAAAB9lCiMEmNvbnRyb2xBcmVhVmlzaWJsZZSIjBRkaXNwbGF5X2NvbnZleF9jdXJ2
+ZZSIjBNkaXNwbGF5X2NvbnZleF9odWxslImMFWRpc3BsYXlfZGVmX3RocmVzaG9sZJSIjBFkaXNw
+bGF5X3BlcmZfbGluZZSIjAdmbl9jb3N0lE2KAowHZnBfY29zdJRN/gGMDXJvY19hdmVyYWdpbmeU
+SwKME3NhdmVkV2lkZ2V0R2VvbWV0cnmUQ0IB2dDLAAMAAAAAAjcAAADjAAAFSQAAAv0AAAI4AAAB
+CQAABUgAAAL8AAAAAAAAAAAHgAAAAjgAAAEJAAAFSAAAAvyUjAx0YXJnZXRfcHJpb3KUSzaMC19f
+dmVyc2lvbl9flEsBjBBjb250ZXh0X3NldHRpbmdzlF2UjBVvcmFuZ2V3aWRnZXQuc2V0dGluZ3OU
+jAdDb250ZXh0lJOUKYGUfZQojAZ2YWx1ZXOUfZQojBRzZWxlY3RlZF9jbGFzc2lmaWVyc5RdlEsA
+YYwMdGFyZ2V0X2luZGV4lEsCaAxLAXWMB2NsYXNzZXOUKIwORnVsbCBpbnRlbnNpdmWUjAdIZWFs
+dGh5lIwOTGVzcyBpbnRlbnNpdmWUjA5TZW1pIGludGVuc2l2ZZR0lIwQY2xhc3NpZmllcl9uYW1l
+c5RdlIwOTmV1cmFsIE5ldHdvcmuUYXViYXUu
+</properties>
+		<properties node_id="12" format="pickle">gASVCQQAAAAAAAB9lCiMEmNvbnRyb2xBcmVhVmlzaWJsZZSIjBNzYXZlZFdpZGdldEdlb21ldHJ5
+lENCAdnQywADAAAAAALUAAAAygAABKwAAAMWAAAC1QAAAPAAAASrAAADFQAAAAAAAAAAB4AAAALV
+AAAA8AAABKsAAAMVlIwLX192ZXJzaW9uX1+USwGMEGNvbnRleHRfc2V0dGluZ3OUXZQojBVvcmFu
+Z2V3aWRnZXQuc2V0dGluZ3OUjAdDb250ZXh0lJOUKYGUfZQojAZ2YWx1ZXOUfZQojAZhdHRyX3iU
+jARDRkQ0lEtmhpSMBmF0dHJfeZSMDVBlcmZlY3QgTWF0Y2iUS2aGlIwJc2VsZWN0aW9ulI+USv7/
+//+GlGgESwF1jAphdHRyaWJ1dGVzlH2UKIwGV2VpZ2h0lEsCjAQxIE1NlEsCjAQzIE1NlEsCjAQ0
+IE1NlEsCjAQyIE1NlEsCjARDRkRQlEsCjARDRkQxlEsCjARDRkQylEsCjARDRkQzlEsCaA9LAmgS
+SwKMBUNsYXNzlEsBdYwFbWV0YXOUfZQojAVMZW50aJRLAowNVG90YWwgU3RyaW5nc5RLAowIU2Vx
+dWVuY2WUSwOMDk5ldXJhbCBOZXR3b3JrlEsBjB9OZXVyYWwgTmV0d29yayAoRnVsbCBpbnRlbnNp
+dmUplEsCjBhOZXVyYWwgTmV0d29yayAoSGVhbHRoeSmUSwKMH05ldXJhbCBOZXR3b3JrIChMZXNz
+IGludGVuc2l2ZSmUSwKMH05ldXJhbCBOZXR3b3JrIChTZW1pIGludGVuc2l2ZSmUSwKMBEZvbGSU
+SwF1dWJoCSmBlH2UKGgMfZQojAZhdHRyX3iUjAQ0IE1NlEtmhpSMBmF0dHJfeZSMBENGRDSUS2aG
+lIwJc2VsZWN0aW9ulI+USv7///+GlGgESwF1aBd9lCiMBDEgTU2USwKMBDIgTU2USwKMBDMgTU2U
+SwJoMksCjARDRkRQlEsCjARDRkQxlEsCjARDRkQylEsCjARDRkQzlEsCaDVLAowGV2VpZ2h0lEsC
+jAVDbGFzc5RLAXVoI32UKIwFTGVudGiUSwKMDVRvdGFsIFN0cmluZ3OUSwKMDVBlcmZlY3QgTWF0
+Y2iUSwKMCFNlcXVlbmNllEsDjA5OZXVyYWwgTmV0d29ya5RLAYwfTmV1cmFsIE5ldHdvcmsgKEZ1
+bGwgaW50ZW5zaXZlKZRLAowYTmV1cmFsIE5ldHdvcmsgKEhlYWx0aHkplEsCjB9OZXVyYWwgTmV0
+d29yayAoTGVzcyBpbnRlbnNpdmUplEsCjB9OZXVyYWwgTmV0d29yayAoU2VtaSBpbnRlbnNpdmUp
+lEsCjARGb2xklEsBdXViZXUu
+</properties>
+		<properties node_id="13" format="pickle">gASVuwEAAAAAAAB9lCiMC2F1dG9fY29tbWl0lIiMCGJhcl9zaXpllEsDjBJjb250cm9sQXJlYVZp
+c2libGWUiIwMZGlzdGFuY2VfaWR4lEsBjBBncm91cF9ieV9jbHVzdGVylIiMEXBlbmRpbmdfc2Vs
+ZWN0aW9ulF2UjBNzYXZlZFdpZGdldEdlb21ldHJ5lENCAdnQywADAAAAAAKUAAAAmwAABOsAAANq
+AAAClAAAAJsAAATrAAADagAAAAAAAAAAB4AAAAKUAAAAmwAABOsAAANqlIwLX192ZXJzaW9uX1+U
+SwGMEGNvbnRleHRfc2V0dGluZ3OUXZSMFW9yYW5nZXdpZGdldC5zZXR0aW5nc5SMB0NvbnRleHSU
+k5QpgZR9lCiMBnZhbHVlc5R9lCiMEmFubm90YXRpb25fdmFyX2lkeJRLAUr+////hpSMD2NsdXN0
+ZXJfdmFyX2lkeJRLAUr+////hpRoCksBdYwKYXR0cmlidXRlc5SMBUNsYXNzlEsBhpSMDk5ldXJh
+bCBOZXR3b3JrlEsBhpSMBEZvbGSUSwGGlIeUjAVtZXRhc5QpjApjbGFzc192YXJzlCl1YmF1Lg==
+</properties>
+		<properties node_id="14" format="pickle">gASVEgYAAAAAAAB9lCiMC2F1dG9fY29tbWl0lIiMEmNvbnRyb2xBcmVhVmlzaWJsZZSIjBNzYXZl
+ZFdpZGdldEdlb21ldHJ5lENCAdnQywADAAAAAAAAAAAAHQAAB38AAAQFAAAAAAAAAB0AAAd/AAAE
+BQAAAAACAAAAB4AAAAAAAAAAHQAAB38AAAQFlIwJc2VsZWN0aW9ulF2UjBVudW1weS5jb3JlLm11
+bHRpYXJyYXmUjAZzY2FsYXKUk5SMBW51bXB5lIwFZHR5cGWUk5SMAmk4lImIh5RSlChLA4wBPJRO
+Tk5K/////0r/////SwB0lGJDCCsAAAAAAAAAlIaUUpRhjA92aXN1YWxfc2V0dGluZ3OUfZQojAVG
+b250c5SMBVRpdGxllIwJRm9udCBzaXpllIeUSzKMBkZpZ3VyZZSMC0JvdHRvbSBheGlzlIwOVmVy
+dGljYWwgdGlja3OUh5SIaBuMCkdyb3VwIGF4aXOUaB2HlIloG4wJR3JpZGxpbmVzlIwEU2hvd5SH
+lIhoG2ghjAdPcGFjaXR5lIeUS25oF4wLRm9udCBmYW1pbHmUaCaHlIwPVGltZXMgTmV3IFJvbWFu
+lGgXaBiMBkl0YWxpY5SHlIloF4wKQXhpcyB0aXRsZZRoGYeUSxBoF4wKQXhpcyB0aWNrc5RoGYeU
+Sw9oF4wGTGVnZW5klGgZh5RLG2gXaC1oKYeUiXWMBWdyYXBolH2UjAtfX3ZlcnNpb25fX5RLAYwQ
+Y29udGV4dF9zZXR0aW5nc5RdlCiMFW9yYW5nZXdpZGdldC5zZXR0aW5nc5SMB0NvbnRleHSUk5Qp
+gZR9lCiMBnZhbHVlc5R9lCiMCWFubm90X3ZhcpSMBUNsYXNzlEtlhpSMCWNvbG9yX3ZhcpRoP0tl
+hpSMCWdyb3VwX3ZhcpSMBEZvbGSUS2WGlIwMc2VsZWN0ZWRfdmFylIwFTGVudGiUS2aGlGgyfZRo
+NEsBdYwKYXR0cmlidXRlc5R9lCiMBldlaWdodJRLAowEMSBNTZRLAowEMyBNTZRLAowENCBNTZRL
+AowEMiBNTZRLAowEQ0ZEUJRLAowEQ0ZEMZRLAowEQ0ZEMpRLAowEQ0ZEM5RLAowEQ0ZENJRLAowN
+UGVyZmVjdCBNYXRjaJRLAowFQ2xhc3OUSwF1jAVtZXRhc5R9lCiMBUxlbnRolEsCjA1Ub3RhbCBT
+dHJpbmdzlEsCjAhTZXF1ZW5jZZRLA4wOTmV1cmFsIE5ldHdvcmuUSwGMH05ldXJhbCBOZXR3b3Jr
+IChGdWxsIGludGVuc2l2ZSmUSwKMGE5ldXJhbCBOZXR3b3JrIChIZWFsdGh5KZRLAowfTmV1cmFs
+IE5ldHdvcmsgKExlc3MgaW50ZW5zaXZlKZRLAowfTmV1cmFsIE5ldHdvcmsgKFNlbWkgaW50ZW5z
+aXZlKZRLAowERm9sZJRLAXV1Ymg5KYGUfZQoaDx9lCiMCWFubm90X3ZhcpSMBUNsYXNzlEtlhpSM
+CWNvbG9yX3ZhcpRoZ0tlhpSMCWdyb3VwX3ZhcpSMBEZvbGSUS2WGlIwMc2VsZWN0ZWRfdmFylIwF
+TGVudGiUS2aGlIwFZ3JhcGiUfZRoNEsBdWhKfZQojAQxIE1NlEsCjAQyIE1NlEsCjAQzIE1NlEsC
+jAQ0IE1NlEsCjARDRkRQlEsCjARDRkQxlEsCjARDRkQylEsCjARDRkQzlEsCjARDRkQ0lEsCjAZX
+ZWlnaHSUSwKMBUNsYXNzlEsBdWhYfZQojAVMZW50aJRLAowNVG90YWwgU3RyaW5nc5RLAowNUGVy
+ZmVjdCBNYXRjaJRLAowIU2VxdWVuY2WUSwOMDk5ldXJhbCBOZXR3b3JrlEsBjB9OZXVyYWwgTmV0
+d29yayAoRnVsbCBpbnRlbnNpdmUplEsCjBhOZXVyYWwgTmV0d29yayAoSGVhbHRoeSmUSwKMH05l
+dXJhbCBOZXR3b3JrIChMZXNzIGludGVuc2l2ZSmUSwKMH05ldXJhbCBOZXR3b3JrIChTZW1pIGlu
+dGVuc2l2ZSmUSwKMBEZvbGSUSwF1dWJldS4=
+</properties>
+		<properties node_id="15" format="pickle">gASVZQQAAAAAAAB9lCiMC2F1dG9fY29tbWl0lIiMEmNvbnRyb2xBcmVhVmlzaWJsZZSIjBNpZ25v
+cmVfbmV3X2ZlYXR1cmVzlImME3NhdmVkV2lkZ2V0R2VvbWV0cnmUQ0IB2dDLAAMAAAAAApQAAADX
+AAAE6wAAAy4AAAKUAAAA1wAABOsAAAMuAAAAAAAAAAAHgAAAApQAAADXAAAE6wAAAy6UjBJ1c2Vf
+aW5wdXRfZmVhdHVyZXOUiYwLX192ZXJzaW9uX1+USwGMEGNvbnRleHRfc2V0dGluZ3OUXZQojBVv
+cmFuZ2V3aWRnZXQuc2V0dGluZ3OUjAdDb250ZXh0lJOUKYGUfZQojAZ2YWx1ZXOUfZQojBFkb21h
+aW5fcm9sZV9oaW50c5R9lCiMBldlaWdodJRLAoaUjAlhdHRyaWJ1dGWUSwCGlIwEMSBNTZRLAoaU
+aBVLAYaUjAQzIE1NlEsChpRoFUsChpSMBDQgTU2USwKGlGgVSwOGlIwEMiBNTZRLAoaUaBVLBIaU
+jARDRkRQlEsChpRoFUsFhpSMBENGRDGUSwKGlGgVSwaGlIwEQ0ZEMpRLAoaUaBVLB4aUjARDRkQz
+lEsChpRoFUsIhpSMBENGRDSUSwKGlGgVSwmGlIwNUGVyZmVjdCBNYXRjaJRLAoaUaBVLCoaUjAVD
+bGFzc5RLAYaUjAVjbGFzc5RLAIaUjAVMZW50aJRLAoaUjARtZXRhlEsAhpSMDVRvdGFsIFN0cmlu
+Z3OUSwKGlGg7SwGGlIwIU2VxdWVuY2WUSwOGlGg7SwKGlHVK/v///4aUaAdLAXWMCmF0dHJpYnV0
+ZXOUfZQoaBdLAmggSwJoGksCaB1LAmgjSwJoJksCaClLAmgsSwJoL0sCaBNLAmg1SwF1jAVtZXRh
+c5R9lChoOUsCaD1LAmgySwJoQEsDdXViaAwpgZR9lChoD32UKIwRZG9tYWluX3JvbGVfaGludHOU
+fZQojAZXZWlnaHSUSwKGlIwJYXR0cmlidXRllEsAhpSMBDEgTU2USwKGlGhPSwGGlIwEMyBNTZRL
+AoaUaE9LAoaUjAQ0IE1NlEsChpRoT0sDhpSMBDIgTU2USwKGlGhPSwSGlIwEQ0ZEUJRLAoaUaE9L
+BYaUjARDRkQxlEsChpRoT0sGhpSMBENGRDKUSwKGlGhPSweGlIwEQ0ZEM5RLAoaUaE9LCIaUjARD
+RkQ0lEsChpRoT0sJhpSMDVBlcmZlY3QgTWF0Y2iUSwKGlGhPSwqGlIwFQ2xhc3OUSwGGlIwFY2xh
+c3OUSwCGlIwFTGVudGiUSwKGlIwEbWV0YZRLAIaUjA1Ub3RhbCBTdHJpbmdzlEsChpRodUsBhpSM
+CFNlcXVlbmNllEsDhpRodUsChpR1Sv7///+GlGgHSwF1aER9lChobEsCaFFLAmhaSwJoVEsCaFdL
+AmhdSwJoYEsCaGNLAmhmSwJoaUsCaE1LAmhvSwF1aEZ9lChoc0sCaHdLAmh6SwN1dWJldS4=
+</properties>
+		<properties node_id="16" format="pickle">gASVGgsAAAAAAAB9lCiMEmNvbnRyb2xBcmVhVmlzaWJsZZSIjAxyZWNlbnRfcGF0aHOUXZQojB5v
+cmFuZ2V3aWRnZXQudXRpbHMuZmlsZWRpYWxvZ3OUjApSZWNlbnRQYXRolJOUKYGUfZQojAdhYnNw
+YXRolIwmRTovTmV3IGZvbGRlciAoMikvY29tYmluZWRfY3N2KDIpLnhsc3iUjAZwcmVmaXiUTowH
+cmVscGF0aJROjAV0aXRsZZSMAJSMBXNoZWV0lGgOjAtmaWxlX2Zvcm1hdJROdWJoBimBlH2UKGgJ
+jDZDOi9Vc2Vycy9UYXVzaWYgVXIgUmVobWFuL0Rlc2t0b3AvY29tYmluZWRfY3N2KDIpLnhsc3iU
+aAtOaAxOaA1oDmgPaA5oEE51YmgGKYGUfZQoaAmMF0U6L2NvbWJpbmVkX2NzdigyKS54bHN4lGgL
+TmgMTmgNaA5oD2gOaBBOdWJoBimBlH2UKGgJjCJDOi9Vc2Vycy9MZW5vdm8gQm9vay9EZXNrdG9w
+LzEuY3N2lGgLTmgMTmgNaA5oD2gOaBBOdWJoBimBlH2UKGgJjBFHOi9kYXRhc2V0KDMpLmNzdpRo
+C05oDE5oDWgOaA9oDmgQTnViaAYpgZR9lChoCYxiQzovVXNlcnMvVGF1c2lmIFVyIFJlaG1hbi9B
+cHBEYXRhL0xvY2FsL1Byb2dyYW1zL09yYW5nZS9MaWIvc2l0ZS1wYWNrYWdlcy9PcmFuZ2UvZGF0
+YXNldHMvaXJpcy50YWKUaAuMD3NhbXBsZS1kYXRhc2V0c5RoDIwIaXJpcy50YWKUaA1oDmgPaA5o
+EE51YmgGKYGUfZQoaAmMZUM6L1VzZXJzL1RhdXNpZiBVciBSZWhtYW4vQXBwRGF0YS9Mb2NhbC9Q
+cm9ncmFtcy9PcmFuZ2UvTGliL3NpdGUtcGFja2FnZXMvT3JhbmdlL2RhdGFzZXRzL3RpdGFuaWMu
+dGFilGgLaCBoDIwLdGl0YW5pYy50YWKUaA1oDmgPaA5oEE51YmgGKYGUfZQoaAmMZUM6L1VzZXJz
+L1RhdXNpZiBVciBSZWhtYW4vQXBwRGF0YS9Mb2NhbC9Qcm9ncmFtcy9PcmFuZ2UvTGliL3NpdGUt
+cGFja2FnZXMvT3JhbmdlL2RhdGFzZXRzL2hvdXNpbmcudGFilGgLaCBoDIwLaG91c2luZy50YWKU
+aA1oDmgPaA5oEE51YmgGKYGUfZQoaAmMa0M6L1VzZXJzL1RhdXNpZiBVciBSZWhtYW4vQXBwRGF0
+YS9Mb2NhbC9Qcm9ncmFtcy9PcmFuZ2UvTGliL3NpdGUtcGFja2FnZXMvT3JhbmdlL2RhdGFzZXRz
+L2hlYXJ0X2Rpc2Vhc2UudGFilGgLaCBoDIwRaGVhcnRfZGlzZWFzZS50YWKUaA1oDmgPaA5oEE51
+YmgGKYGUfZQoaAmMbEM6L1VzZXJzL1RhdXNpZiBVciBSZWhtYW4vQXBwRGF0YS9Mb2NhbC9Qcm9n
+cmFtcy9PcmFuZ2UvTGliL3NpdGUtcGFja2FnZXMvT3JhbmdlL2RhdGFzZXRzL2Jyb3duLXNlbGVj
+dGVkLnRhYpRoC2ggaAyMEmJyb3duLXNlbGVjdGVkLnRhYpRoDWgOaA9oDmgQTnViaAYpgZR9lCho
+CYxhQzovVXNlcnMvVGF1c2lmIFVyIFJlaG1hbi9BcHBEYXRhL0xvY2FsL1Byb2dyYW1zL09yYW5n
+ZS9MaWIvc2l0ZS1wYWNrYWdlcy9PcmFuZ2UvZGF0YXNldHMvem9vLnRhYpRoC2ggaAyMB3pvby50
+YWKUaA1oDmgPaA5oEE51YmWMC3JlY2VudF91cmxzlF2UjBNzYXZlZFdpZGdldEdlb21ldHJ5lENC
+AdnQywADAAAAAAKTAAAAygAABOwAAAMWAAAClAAAAPAAAATrAAADFQAAAAAAAAAAB4AAAAKUAAAA
+8AAABOsAAAMVlIwLc2hlZXRfbmFtZXOUfZSMBnNvdXJjZZRLAIwDdXJslGgOjA1kb21haW5fZWRp
+dG9ylH2UjAtfX3ZlcnNpb25fX5RLAYwQY29udGV4dF9zZXR0aW5nc5RdlCiMFW9yYW5nZXdpZGdl
+dC5zZXR0aW5nc5SMB0NvbnRleHSUk5QpgZR9lCiMBnZhbHVlc5R9lCiMCXZhcmlhYmxlc5RdlGg+
+fZRoSl2UKF2UKIwFTGVudGiUjBRPcmFuZ2UuZGF0YS52YXJpYWJsZZSMEkNvbnRpbnVvdXNWYXJp
+YWJsZZSTlEsCaA6IZV2UKIwNVG90YWwgU3RyaW5nc5RoUksCaA6IZV2UKIwNUGVyZmVjdCBNYXRj
+aJRoUksCaA6IZV2UKIwEMSBNTZRoUksAaA6IZV2UKIwEMiBNTZRoUksAaA6IZV2UKIwEMyBNTZRo
+UksAaA6IZV2UKIwENCBNTZRoUksAaA6IZV2UKIwEQ0ZEUJRoUksAjAQwLCAxlIhlXZQojARDRkQx
+lGhSSwBoDohlXZQojARDRkQylGhSSwBoDohlXZQojARDRkQzlGhSSwBoDohlXZQojARDRkQ0lGhS
+SwBoDohlXZQojAZXZWlnaHSUaFJLAGgOiGVdlCiMBUNsYXNzlGhQjBBEaXNjcmV0ZVZhcmlhYmxl
+lJOUSwGMN0Z1bGwgaW50ZW5zaXZlLCBIZWFsdGh5LCBMZXNzIGludGVuc2l2ZSwgU2VtaSBpbnRl
+bnNpdmWUiWVdlCiMCFNlcXVlbmNllGhQjA5TdHJpbmdWYXJpYWJsZZSTlEsCaA6JZWVzaEBLAXWM
+CmF0dHJpYnV0ZXOUKIwFTGVudGiUSwKGlIwNVG90YWwgU3RyaW5nc5RLAoaUjA1QZXJmZWN0IE1h
+dGNolEsChpSMBDEgTU2USwKGlIwEMiBNTZRLAoaUjAQzIE1NlEsChpSMBDQgTU2USwKGlIwEQ0ZE
+UJRdlCiMATCUjAExlGWGlIwEQ0ZEMZRLAoaUjARDRkQylEsChpSMBENGRDOUSwKGlIwEQ0ZENJRL
+AoaUjAZXZWlnaHSUSwKGlIwFQ2xhc3OUXZQojA5GdWxsIGludGVuc2l2ZZSMB0hlYWx0aHmUjA5M
+ZXNzIGludGVuc2l2ZZSMDlNlbWkgaW50ZW5zaXZllGWGlHSUjAVtZXRhc5SMCFNlcXVlbmNllEsD
+hpSFlIwKY2xhc3NfdmFyc5QpjBJtb2RpZmllZF92YXJpYWJsZXOUXZR1YmhFKYGUfZQoaEh9lCho
+Sl2UaD59lGhKXZQoXZQojAVMZW50aJRoUksAaA6IZV2UKIwMVG90YWxTdHJpbmdzlGhSSwBoDohl
+XZQojAxQZXJmZWN0TWF0Y2iUaFJLAGgOiGVdlCiMAzFNTZRoUksAaA6IZV2UKIwDMk1NlGhSSwBo
+DohlXZQojAMzTU2UaFJLAGgOiGVdlCiMAzRNTZRoUksAaA6IZV2UKIwEQ0ZEUJRob0sAjAQwLCAx
+lIhlXZQojARDRkQxlGhSSwBoDohlXZQojARDRkQylGhSSwBoDohlXZQojARDRkQzlGhSSwBoDohl
+XZQojARDRkQ0lGhSSwBoDohlXZQojAZXZWlnaHSUaFJLAGgOiGVdlCiMBUNsYXNzlGhSSwBoDohl
+ZXNoQEsBdWh1KGipSwKGlGirSwKGlGitSwKGlGivSwKGlGixSwKGlGizSwKGlGi1SwKGlGi3XZQo
+aIZoh2WGlGi6SwKGlGi8SwKGlGi+SwKGlGjASwKGlGjCSwKGlGjESwKGlHSUaJspaJ8paKBdlHVi
+ZXUu
+</properties>
+		<properties node_id="17" format="literal">{'compatibility_mode': False, 'controlAreaVisible': True, 'number_of_folds': 20, 'replacement': False, 'sampleSizeNumber': 10, 'sampleSizePercentage': 80, 'sampleSizeSqlPercentage': 0.1, 'sampleSizeSqlTime': 1, 'sampling_type': 0, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x03@\x00\x00\x00\xf0\x00\x00\x04:\x00\x00\x02\xcb\x00\x00\x03A\x00\x00\x01\x16\x00\x00\x049\x00\x00\x02\xca\x00\x00\x00\x00\x00\x00\x00\x00\x07\x80\x00\x00\x03A\x00\x00\x01\x16\x00\x00\x049\x00\x00\x02\xca', 'selectedFold': 1, 'sql_dl': False, 'stratify': False, 'use_seed': False, '__version__': 2}</properties>
+		<properties node_id="18" format="pickle">gASVJQMAAAAAAAB9lCiMFGNvbXBhcmlzb25fY3JpdGVyaW9ulEsAjBJjb250cm9sQXJlYVZpc2li
+bGWUiIwNY3Zfc3RyYXRpZmllZJSJjAduX2ZvbGRzlEsCjAluX3JlcGVhdHOUSwSMCnJlc2FtcGxp
+bmeUSwCMBHJvcGWURz+5mZmZmZmajAtzYW1wbGVfc2l6ZZRLDIwTc2F2ZWRXaWRnZXRHZW9tZXRy
+eZRDQgHZ0MsAAwAAAAACOQAAANYAAAVGAAADQQAAAjoAAAD8AAAFRQAAA0AAAAAAAAAAAAeAAAAC
+OgAAAPwAAAVFAAADQJSMEnNodWZmbGVfc3RyYXRpZmllZJSJjAh1c2Vfcm9wZZSJjAtzY29yZV90
+YWJsZZR9lIwMc2hvd25fc2NvcmVzlI+UKIwDTVNFlIwGUmVjYWxslIwJUHJlY2lzaW9ulIwCQ0GU
+jANNQUWUjARSTVNFlIwDQVVDlIwCUjKUjAJGMZSQc4wLX192ZXJzaW9uX1+USwOMEGNvbnRleHRf
+c2V0dGluZ3OUXZSMFW9yYW5nZXdpZGdldC5zZXR0aW5nc5SMB0NvbnRleHSUk5QpgZR9lCiMBnZh
+bHVlc5R9lCiMD2NsYXNzX3NlbGVjdGlvbpSMFihBdmVyYWdlIG92ZXIgY2xhc3NlcymUSv////+G
+lIwMZm9sZF9mZWF0dXJllE5K/v///4aUjBVmb2xkX2ZlYXR1cmVfc2VsZWN0ZWSUiUr+////hpRo
+DX2UaBpLA3WMCmF0dHJpYnV0ZXOUKIwEMSBNTZRLAoaUjAQyIE1NlEsChpSMBDMgTU2USwKGlIwE
+NCBNTZRLAoaUjARDRkRQlEsChpSMBENGRDGUSwKGlIwEQ0ZEMpRLAoaUjARDRkQzlEsChpSMBENG
+RDSUSwKGlIwGV2VpZ2h0lEsChpR0lIwFbWV0YXOUKIwFTGVudGiUSwKGlIwNVG90YWwgU3RyaW5n
+c5RLAoaUjA1QZXJmZWN0IE1hdGNolEsChpSMCFNlcXVlbmNllEsDhpR0lIwKY2xhc3NfdmFyc5SM
+BUNsYXNzlEsBhpSFlHViYXUu
+</properties>
+		<properties node_id="19" format="literal">{'activation_index': 3, 'alpha_index': 0, 'auto_apply': True, 'controlAreaVisible': True, 'hidden_layers_input': '2,3,2', 'learner_name': 'Neural Network', 'max_iterations': 20000, 'replicable': True, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x03\x16\x00\x00\x01A\x00\x00\x04i\x00\x00\x02\xa0\x00\x00\x03\x17\x00\x00\x01g\x00\x00\x04h\x00\x00\x02\x9f\x00\x00\x00\x00\x00\x00\x00\x00\x07\x80\x00\x00\x03\x17\x00\x00\x01g\x00\x00\x04h\x00\x00\x02\x9f', 'solver_index': 2, '__version__': 1}</properties>
+		<properties node_id="20" format="literal">{'controlAreaVisible': True, 'display_convex_curve': True, 'display_convex_hull': False, 'display_def_threshold': True, 'display_perf_line': True, 'fn_cost': 500, 'fp_cost': 510, 'roc_averaging': 0, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x027\x00\x00\x00\xe3\x00\x00\x05I\x00\x00\x02\xfd\x00\x00\x028\x00\x00\x01\t\x00\x00\x05H\x00\x00\x02\xfc\x00\x00\x00\x00\x00\x00\x00\x00\x07\x80\x00\x00\x028\x00\x00\x01\t\x00\x00\x05H\x00\x00\x02\xfc', 'target_prior': 50.0, '__version__': 1, 'context_settings': []}</properties>
+		<properties node_id="21" format="literal">{'controlAreaVisible': True, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x02b\x00\x00\x00\xa5\x00\x00\x05\x1d\x00\x00\x03`\x00\x00\x02b\x00\x00\x00\xa5\x00\x00\x05\x1d\x00\x00\x03`\x00\x00\x00\x00\x00\x00\x00\x00\x07\x80\x00\x00\x02b\x00\x00\x00\xa5\x00\x00\x05\x1d\x00\x00\x03`', 'stripe_len': 1, '__version__': 1, 'context_settings': []}</properties>
+	</node_properties>
+	<session_state>
+		<window_groups />
+	</session_state>
+</scheme>
